@@ -17128,3 +17128,54 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+
+/* =============================================
+   ACCESSIBILITY: Focus-visible styles
+   ============================================= */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible {
+    outline: 2px solid var(--rr-theme-primary, #F44E19);
+    outline-offset: 2px;
+}
+
+/* =============================================
+   ACCESSIBILITY: Reduced motion preference
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .marquee-track {
+        animation: none !important;
+    }
+
+    .rr-upDown,
+    .rr-zooming {
+        animation: none !important;
+    }
+}
+
+/* =============================================
+   ACCESSIBILITY: Screen reader only utility
+   ============================================= */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

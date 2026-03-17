@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -7,6 +7,10 @@
     <title>Repair &amp; Painting - RoofPro Professional Roofing</title>
     <meta name="description" content="RoofPro - Professional Roofing Company">
     <meta name="author" content="ahmmedsabbirbd">
+        <meta property="og:type" content="website">
+    <meta property="og:title" content="Repair Painting - RoofPro Professional Roofing">
+    <meta property="og:description" content="RoofPro - Professional Roofing Company providing expert roofing services">
+    <meta property="og:image" content="assets/imgs/banner/banner-1.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.svg">
@@ -79,6 +83,8 @@
 </head>
 
 <body class="body-1">
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--rr-theme-primary,#F44E19);color:#fff;padding:8px 16px;z-index:10000;font-size:14px;transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
 
     <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -87,7 +93,7 @@
     <!-- preloader start -->
     <!-- style 1 -->
     <div id="preloader" data-preloader="active" data-loaded="doted">
-        <div class="preloader-close">x</div>
+        <button type="button" class="preloader-close" aria-label="Close preloader">x</button>
         <div class="sk-three-bounce">
             <div class="sk-child sk-bounce1"></div>
             <div class="sk-child sk-bounce2"></div>
@@ -97,7 +103,7 @@
 
     <!-- style 2 -->
     <div class="preloader" data-preloader="deactive" data-loaded="progress">
-        <div class="preloader-close">x</div>
+        <button type="button" class="preloader-close" aria-label="Close preloader">x</button>
         <div class="wrapper w-100 text-center">
             <div id="progress-bar" class="preloader-text" data-text="ROOFPRO"></div>
             <div class="progress-bar">
@@ -118,7 +124,7 @@
     <!-- preloader end -->
 
     <!-- Backtotop start -->
-    <div id="scroll-percentage">
+    <div id="scroll-percentage" role="button" aria-label="Scroll to top">
         <span id="scroll-percentage-value"></span>
     </div>
     <!-- Backtotop end -->
@@ -143,7 +149,7 @@
                             </a>
                             </div>
                             <div class="search__close">
-                                <button type="button" class="search__close-btn search-close-btn">
+                                <button type="button" aria-label="Close search" class="search__close-btn search-close-btn">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
                                     <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                           stroke-linejoin="round" />
@@ -156,9 +162,9 @@
                         <div class="search__form">
                             <form action="#">
                                 <div class="search__input">
-                                    <input class="search-input-field" type="text" placeholder="Type here to search...">
+                                    <label for="site-search" class="sr-only" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;">Search</label><input id="site-search" class="search-input-field" type="text" placeholder="Type here to search..." aria-label="Search">
                                     <span class="search-focus-border"></span>
-                                    <button type="submit">
+                                    <button type="submit" aria-label="Search">
                                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                         <path
                                                 d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
@@ -190,7 +196,7 @@
                         </a>
                         </div>
                         <div class="offcanvas__close">
-                            <button class="offcanvas-close-icon animation--flip">
+                            <button type="button" aria-label="Close menu" class="offcanvas-close-icon animation--flip">
                                 <span class="offcanvas-m-lines">
                               <span class="offcanvas-m-line line--1"></span><span class="offcanvas-m-line line--2"></span><span class="offcanvas-m-line line--3"></span>
                                 </span>
@@ -202,10 +208,10 @@
                         <h4 class="offcanvas__title mb-20">Subscribe & Follow</h4>
                         <p class="mb-30">The scallops were perfectly cooked, tender, and flavorful, paired beautifully with a creamy risotto and seasonal vegetables. The presentation was artful, showcasing the chef's attention to detail.</p>
                         <ul class="header-top-socail-menu d-flex">
-                            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                            <li><a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                            <li><a href="https://vimeo.com/"><i class="fa-brands fa-vimeo-v"></i></a></li>
+                            <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.pinterest.com/" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li><a href="https://vimeo.com/" aria-label="Vimeo"><i class="fa-brands fa-vimeo-v"></i></a></li>
                         </ul>
                     </div>
                     <div class="offcanvas__btn">
@@ -288,12 +294,12 @@
                                                 <li><a href="about-us.html">About Us</a></li>
                                                 <li class="has-dropdown active"><a href="service.html">Services</a>
                                                     <ul class="submenu">
-                                                        <li><a href="service-details.html"><span class="dd-icon"><img src="assets/imgs/why-choose-us-2/icon-1.png" alt="Modified Roofing"></span>Modified Roofing</a></li>
-                                                        <li><a href="service-roof-installation.html"><span class="dd-icon"><img src="assets/imgs/why-choose-us-2/icon-2.png" alt="Roof Installation"></span>Roof Installation</a></li>
-                                                        <li><a href="service-damage-roofing.html"><span class="dd-icon"><img src="assets/imgs/why-choose-us-2/icon-3.png" alt="Damage Roofing"></span>Damage Roofing</a></li>
-                                                        <li><a href="service-new-roofing.html"><span class="dd-icon"><img src="assets/imgs/why-choose-us-2/icon-4.png" alt="New Roofing"></span>New Roofing</a></li>
-                                                        <li><a href="service-roof-renovation.html"><span class="dd-icon"><img src="assets/imgs/why-choose-us-2/icon-5.png" alt="Roof Renovation"></span>Roof Renovation</a></li>
-                                                        <li><a href="service-roof-solar-panels.html"><span class="dd-icon"><img src="assets/imgs/why-choose-us-2/icon-6.png" alt="Roof Solar Panels"></span>Roof Solar Panels</a></li>
+                                                        <li><a href="service-details.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-1.png" alt="Modified Roofing"></span>Modified Roofing</a></li>
+                                                        <li><a href="service-roof-installation.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-2.png" alt="Roof Installation"></span>Roof Installation</a></li>
+                                                        <li><a href="service-damage-roofing.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-3.png" alt="Damage Roofing"></span>Damage Roofing</a></li>
+                                                        <li><a href="service-new-roofing.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-4.png" alt="New Roofing"></span>New Roofing</a></li>
+                                                        <li><a href="service-roof-renovation.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-5.png" alt="Roof Renovation"></span>Roof Renovation</a></li>
+                                                        <li><a href="service-roof-solar-panels.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-6.png" alt="Roof Solar Panels"></span>Roof Solar Panels</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="blog.html">Blog</a></li>
@@ -305,7 +311,7 @@
 
                                 <div class="header__right">
                                     <div class="header__action d-flex align-items-center">
-                                        <button class="search-open-btn d-none d-sm-block">
+                                        <button type="button" aria-label="Open search" class="search-open-btn d-none d-sm-block">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M19.0004 18.9999L14.6504 14.6499" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -323,7 +329,7 @@
 
                                         <div class="header__hamburger ml-20 d-xl-none">
                                             <div class="sidebar__toggle">
-                                                <a class="bar-icon" href="javascript:void(0)">
+                                                <a class="bar-icon" href="javascript:void(0)" aria-label="Open menu" role="button">
                                                 <span></span>
                                                 <span></span>
                                                 <span></span>
@@ -341,7 +347,7 @@
     </header>
     <!-- Header area end -->
 
-    <main>
+    <main id="main-content">
         <!-- Breadcrumb area start  -->
         <div class="breadcrumb__area breadcrumb-space overly theme-bg-heading-primary overflow-hidden">
             <div class="breadcrumb__background" data-background="assets/imgs/breadcrumb/breadcrumb.jpg"></div>
@@ -385,23 +391,23 @@
                             <div class="sidebar__widget">
                                 <h4 class="sidebar__widget-title">Our Services</h4>
                                 <div class="sidebar__widget-category">
-                                    <a href="service-apartment-design.html">Apartment Design <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-repair-painting.html">Repair &amp; Painting <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-roof-installation.html">Roof Installation <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-roof-renovation.html">Roof Renovation <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-expert-mechanical.html">Expert Mechanical <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-architecture-building.html">Architecture &amp; Building <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-details.html">Modified Roofing <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-damage-roofing.html">Damage Roofing <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-new-roofing.html">New Roofing <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-roof-solar-panels.html">Roof Solar Panels <img src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-apartment-design.html">Apartment Design <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-repair-painting.html">Repair &amp; Painting <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-roof-installation.html">Roof Installation <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-roof-renovation.html">Roof Renovation <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-expert-mechanical.html">Expert Mechanical <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-architecture-building.html">Architecture &amp; Building <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-details.html">Modified Roofing <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-damage-roofing.html">Damage Roofing <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-new-roofing.html">New Roofing <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-roof-solar-panels.html">Roof Solar Panels <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="sidebar__widget estimate section-bg-1">
                                 <h4 class="sidebar__widget-title">Get Free Estimate</h4>
                                 <div class="sidebar__widget-estimate">
                                     <div class="sidebar__widget-estimate__thumb">
-                                        <img src="assets/imgs/blog-details/estimate.png" alt="image not found">
+                                        <img loading="lazy" src="assets/imgs/blog-details/estimate.png" alt="image not found">
                                         <div class="sidebar__widget-estimate__text">
                                             <h3 class="rr-br-hidden-xl text-center mb-35">Need a roofing <br> expert? Get your <br> free quote today</h3>
 
@@ -421,7 +427,7 @@
                         <div class="sd-content">
                             <!-- Hero Image -->
                             <div class="sd-content__media mb-35">
-                                <img src="assets/imgs/service-details/service-details-1.jpg" class="img-fluid" style="width:100%; border-radius:12px;" alt="Professional roof installation by RoofPro">
+                                <img loading="lazy" src="assets/imgs/service-details/service-details-1.jpg" class="img-fluid" style="width:100%; border-radius:12px;" alt="Professional roof installation by RoofPro">
                             </div>
 
                             <!-- Main Heading -->
@@ -468,7 +474,7 @@
                                         </li>
                                     </ul>
                                     <div class="sd-includes__image">
-                                        <img src="assets/imgs/service-details/service-details-1.jpg" alt="Repair and painting work in progress">
+                                        <img loading="lazy" src="assets/imgs/service-details/service-details-1.jpg" alt="Repair and painting work in progress">
                                     </div>
                                 </div>
                             </div>
@@ -500,35 +506,35 @@
                                 <div class="swiper-slide">
                                     <div class="brand__item text-center">
                                         <a href="http://themeforest.net" class="brand__thumb brand__thumb-hover-secondary">
-                                        <img class="img-fluid" src="assets/imgs/brand/brand-1.png" alt="image not found">
+                                        <img loading="lazy" class="img-fluid" src="assets/imgs/brand/brand-1.png" alt="image not found">
                                     </a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="brand__item text-center">
                                         <a href="http://themeforest.net" class="brand__thumb brand__thumb-hover-secondary">
-                                        <img class="img-fluid" src="assets/imgs/brand/brand-2.png" alt="image not found">
+                                        <img loading="lazy" class="img-fluid" src="assets/imgs/brand/brand-2.png" alt="image not found">
                                     </a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="brand__item text-center">
                                         <a href="http://themeforest.net" class="brand__thumb brand__thumb-hover-secondary">
-                                        <img class="img-fluid" src="assets/imgs/brand/brand-3.png" alt="image not found">
+                                        <img loading="lazy" class="img-fluid" src="assets/imgs/brand/brand-3.png" alt="image not found">
                                     </a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="brand__item text-center">
                                         <a href="http://themeforest.net" class="brand__thumb brand__thumb-hover-secondary">
-                                        <img class="img-fluid" src="assets/imgs/brand/brand-4.png" alt="image not found">
+                                        <img loading="lazy" class="img-fluid" src="assets/imgs/brand/brand-4.png" alt="image not found">
                                     </a>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="brand__item text-center">
                                         <a href="http://themeforest.net" class="brand__thumb brand__thumb-hover-secondary">
-                                        <img class="img-fluid" src="assets/imgs/brand/brand-5.png" alt="image not found">
+                                        <img loading="lazy" class="img-fluid" src="assets/imgs/brand/brand-5.png" alt="image not found">
                                     </a>
                                     </div>
                                 </div>
@@ -554,7 +560,7 @@
                         </div>
                         <div class="col-lg-6 text-lg-end text-center">
                             <div class="footer__widget-subscribe pl-110 rr-pl-none-lg">
-                                <input type="text" placeholder="Email Address">
+                                <input type="email" name="newsletter-email" placeholder="Email Address" aria-label="Email address for newsletter" autocomplete="email">
                                 <button type="submit" class="rr-btn">
                                 <span class="btn-wrap">
                                     <span class="text-one">Subscribe Now</span>
@@ -582,10 +588,10 @@
                                 </div>
 
                                 <div class="footer__social">
-                                    <a href="https://www.facebook.com/"><img src="assets/imgs/icon/facebook.svg" alt="image not found"></a>
-                                    <a href="https://twitter.com/"><img src="assets/imgs/icon/twitter.svg" alt="image not found"></a>
-                                    <a href="https://www.linkedin.com/"><img src="assets/imgs/icon/linkedin.svg" alt="image not found"></a>
-                                    <a href="https://www.instagram.com/"><img src="assets/imgs/icon/instagram.svg" alt="image not found"></a>
+                                    <a href="https://www.facebook.com/"><img loading="lazy" src="assets/imgs/icon/facebook.svg" alt="image not found"></a>
+                                    <a href="https://twitter.com/"><img loading="lazy" src="assets/imgs/icon/twitter.svg" alt="image not found"></a>
+                                    <a href="https://www.linkedin.com/"><img loading="lazy" src="assets/imgs/icon/linkedin.svg" alt="image not found"></a>
+                                    <a href="https://www.instagram.com/"><img loading="lazy" src="assets/imgs/icon/instagram.svg" alt="image not found"></a>
                                 </div>
                             </div>
                         </div>
@@ -635,7 +641,7 @@
                                     <ul>
                                         <li>
                                             <span class="icon">
-                                            <img src="assets/imgs/icon/call.svg" alt="">
+                                            <img loading="lazy" src="assets/imgs/icon/call.svg" alt="">
                                         </span>
                                             <span class="text">
                                             <span>Call us for support</span>
@@ -644,7 +650,7 @@
                                         </li>
                                         <li>
                                             <span class="icon">
-                                            <img src="assets/imgs/icon/mail.svg" alt="">
+                                            <img loading="lazy" src="assets/imgs/icon/mail.svg" alt="">
                                         </span>
                                             <span class="text">
                                             <span>Email us for query</span>
@@ -653,7 +659,7 @@
                                         </li>
                                         <li class="address">
                                             <span class="icon">
-                                            <img src="assets/imgs/icon/map.svg" alt="">
+                                            <img loading="lazy" src="assets/imgs/icon/map.svg" alt="">
                                         </span>
                                             <span class="text">
                                             <a target="_blank" href="mailto:example@gmail.com">1058 Helton Ave, Stky <br> Berlin, Germany</a>
