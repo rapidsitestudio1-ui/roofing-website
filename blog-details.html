@@ -76,8 +76,10 @@
         .bd-author__info h5 { font-size: 16px; font-weight: 700; color: #15181B; margin-bottom: 6px; }
         .bd-author__info p { font-size: 13px; line-height: 1.7; color: #666; margin: 0; }
         @media (max-width: 575px) {
-            .bd-author { flex-direction: column; text-align: center; padding: 24px 20px; }
-            .bd-author__avatar { width: 90px; height: 90px; }
+            .bd-author { flex-direction: column; align-items: flex-start; text-align: left; gap: 16px; padding: 24px 20px; }
+            .bd-author__avatar { width: 60px; height: 60px; }
+            .bd-author__info h5 { font-size: 15px; margin-bottom: 8px; }
+            .bd-author__info p { font-size: 13px; }
         }
         .bd-back { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--rr-theme-primary); background: rgba(244,78,25,0.08); padding: 12px 28px; border-radius: 30px; transition: all 0.3s ease; margin-bottom: 30px; }
         .bd-back:hover { background: var(--rr-theme-primary); color: #fff; }
