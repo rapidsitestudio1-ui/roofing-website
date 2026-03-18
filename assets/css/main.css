@@ -659,7 +659,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     --rr-color-white: #fff;
     --rr-color-white-70: rgba(255, 255, 255, 0.3);
     --rr-body-primary: #ffffff;
-    --rr-theme-primary: #F44E19;
+    --rr-theme-primary: #bc1827;
     --rr-heading-primary: #15181B;
     --rr-text-body: #6A6A6A;
     --rr-text-p: #6A6A6A;
@@ -1346,7 +1346,7 @@ a:hover {
     z-index: 99999999;
     font-size: 26px;
     color: var(--rr-common-white);
-    background: #F44E19;
+    background: #bc1827;
     width: 40px;
     height: 40px;
     line-height: 36px;
@@ -1382,7 +1382,7 @@ a:hover {
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    background-color: #F44E19;
+    background-color: #bc1827;
     border-radius: 100%;
     display: inline-block;
     -webkit-animation: sk-three-bounce 1.4s ease-in-out 0s infinite both;
@@ -6653,11 +6653,11 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 }
 
 .header-1 .header__logo {
-    width: 267px;
-    min-width: 267px;
-    min-height: 140px;
-    background: var(--rr-common-white);
-    border-bottom-right-radius: 70px;
+    width: 220px;
+    min-width: 220px;
+    min-height: auto;
+    background: transparent;
+    border-bottom-right-radius: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -6667,6 +6667,7 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    padding: 10px 0;
 }
 
 @media (max-width: 575px),
@@ -7637,7 +7638,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     -webkit-filter: blur(1px);
     filter: blur(1px);
     mix-blend-mode: normal;
-    border: 1px solid #F44E19;
+    border: 1px solid #bc1827;
     border-radius: 500px;
 }
 
@@ -12439,7 +12440,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     color: rgba(var(--rr-heading-primary), 50%);
 }
 
-.pricing__card-body ul li.not_included svg [fill="#F44E19"] {
+.pricing__card-body ul li.not_included svg [fill="#bc1827"] {
     fill: var(--rr-heading-primary);
     fill-opacity: 0.5;
 }
@@ -12465,7 +12466,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     color: rgba(var(--rr-color-white), 50%);
 }
 
-.pricing__card-standard .pricing__card-body ul li.not_included svg [fill="#F44E19"] {
+.pricing__card-standard .pricing__card-body ul li.not_included svg [fill="#bc1827"] {
     fill: var(--rr-common-white);
     fill-opacity: 0.5;
 }
@@ -13810,8 +13811,8 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     background: var(--rr-theme-primary);
 }
 
-.testimonial__slider__arrow-prev:hover svg path[fill="#F44E19"],
-.testimonial__slider__arrow-next:hover svg path[fill="#F44E19"] {
+.testimonial__slider__arrow-prev:hover svg path[fill="#bc1827"],
+.testimonial__slider__arrow-next:hover svg path[fill="#bc1827"] {
     fill: var(--rr-common-white);
 }
 
@@ -15029,8 +15030,8 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 }
 
 .why-choose-us-2__item:hover {
-    -webkit-box-shadow: 0px 20px 40px rgba(21, 24, 27, 0.06), inset 0px -4px 0px #F44E19;
-    box-shadow: 0px 20px 40px rgba(21, 24, 27, 0.06), inset 0px -4px 0px #F44E19;
+    -webkit-box-shadow: 0px 20px 40px rgba(21, 24, 27, 0.06), inset 0px -4px 0px #bc1827;
+    box-shadow: 0px 20px 40px rgba(21, 24, 27, 0.06), inset 0px -4px 0px #bc1827;
 }
 
 .why-choose-us-2__item:hover .why-choose-us-2__icon svg [fill="#15181B"] {
@@ -17138,7 +17139,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 [role="button"]:focus-visible {
-    outline: 2px solid var(--rr-theme-primary, #F44E19);
+    outline: 2px solid var(--rr-theme-primary, #bc1827);
     outline-offset: 2px;
 }
 
@@ -17178,4 +17179,19 @@ select:focus-visible,
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Amstill branding: tint service card PNG icons to brand red */
+.what-we-do-2__item-img img {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(89%) saturate(4539%) hue-rotate(348deg) brightness(88%) contrast(93%);
+}
+.what-we-do-2__item:hover .what-we-do-2__item-img img {
+    filter: brightness(0) invert(1);
+}
+
+/* Amstill branding: Why Choose Us section SVG icons to brand red */
+.why-choose-us-2__icon svg path,
+.why-choose-us-2__icon svg polygon,
+.why-choose-us-2__icon svg rect {
+    fill: var(--rr-theme-primary);
 }

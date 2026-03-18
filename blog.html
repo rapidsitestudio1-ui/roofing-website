@@ -36,15 +36,15 @@
         .main-menu ul li.has-dropdown:hover > a .nav-icon { transform: rotate(10deg) scale(1.1); }
         .main-menu ul li.has-dropdown > a::after { content: "" !important; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); display: inline-block; margin-left: 8px; margin-bottom: 3px; transition: transform 0.3s ease; font-size: 0 !important; }
         .main-menu ul li.has-dropdown:hover > a::after { transform: rotate(225deg) !important; }
-        .main-menu ul li .submenu { background: linear-gradient(145deg, #141414, #0d0d0d); border: 1px solid rgba(244,78,25,0.12); border-radius: 16px; padding: 10px; min-width: 310px; box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03) inset; backdrop-filter: blur(12px); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(12px); }
+        .main-menu ul li .submenu { background: linear-gradient(145deg, #141414, #0d0d0d); border: 1px solid rgba(188,24,39,0.12); border-radius: 16px; padding: 10px; min-width: 310px; box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03) inset; backdrop-filter: blur(12px); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(12px); }
         .main-menu ul li:hover > .submenu { transform: translateY(0); }
         .main-menu ul li .submenu li { transform: none; padding: 0; margin-bottom: 2px; }
         .main-menu ul li .submenu li:last-child { margin-bottom: 0; }
         .main-menu ul li .submenu li a { padding: 12px 16px; border-radius: 12px; font-size: 13.5px; font-weight: 400; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 14px; transition: all 0.25s ease; line-height: 1.3; white-space: nowrap; }
-        .main-menu ul li .submenu li a .dd-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(244,78,25,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; flex-shrink: 0; overflow: hidden; }
+        .main-menu ul li .submenu li a .dd-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(188,24,39,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; flex-shrink: 0; overflow: hidden; }
         .main-menu ul li .submenu li a .dd-icon img { width: 24px; height: 24px; object-fit: contain; filter: brightness(0) invert(0.5); transition: filter 0.3s ease; }
         .main-menu ul li .submenu li a::before { display: none; }
-        .main-menu ul li .submenu li:hover > a { color: #fff; background: rgba(244,78,25,0.08); padding-inline-start: 16px; }
+        .main-menu ul li .submenu li:hover > a { color: #fff; background: rgba(188,24,39,0.08); padding-inline-start: 16px; }
         .main-menu ul li .submenu li:hover > a .dd-icon { background: var(--rr-theme-primary); transform: scale(1.05); }
         .main-menu ul li .submenu li:hover > a .dd-icon img { filter: brightness(0) invert(1); }
         .main-menu ul li .submenu li.active > a { color: var(--rr-theme-primary); padding-inline-start: 16px; }
@@ -54,7 +54,7 @@
 
 <body class="body-1">
     <!-- Skip to main content -->
-    <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--rr-theme-primary,#F44E19);color:#fff;padding:8px 16px;z-index:10000;font-size:14px;transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+    <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--rr-theme-primary,#bc1827);color:#fff;padding:8px 16px;z-index:10000;font-size:14px;transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
 
     <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -211,8 +211,8 @@
                         <div class="header__logo">
                             <a href="index.html">
                                 <div class="logo d-flex align-items-center justify-content-center">
-                                    <img class="d-none d-xl-block img-fluid" src="assets/imgs/logo/logo.svg" alt="logo not found">
-                                    <img class="d-block d-xl-none img-fluid" src="assets/imgs/logo/logo-white.svg" alt="logo not found">
+                                    
+                                    <img src="assets/imgs/logo/logo-white.svg" alt="Amstill Roofing" style="height: 65px; width: 125px; object-fit: contain;">
                                 </div>
                             </a>
                         </div>
@@ -258,12 +258,12 @@
                                                 <li><a href="about-us.html">About Us</a></li>
                                                 <li class="has-dropdown"><a href="service.html">Services</a>
                                                     <ul class="submenu">
-                                                        <li><a href="service-details.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-1.png" alt="Modified Roofing"></span>Modified Roofing</a></li>
-                                                        <li><a href="service-roof-installation.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-2.png" alt="Roof Installation"></span>Roof Installation</a></li>
-                                                        <li><a href="service-damage-roofing.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-3.png" alt="Damage Roofing"></span>Damage Roofing</a></li>
-                                                        <li><a href="service-new-roofing.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-4.png" alt="New Roofing"></span>New Roofing</a></li>
-                                                        <li><a href="service-roof-renovation.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-5.png" alt="Roof Renovation"></span>Roof Renovation</a></li>
-                                                        <li><a href="service-roof-solar-panels.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-6.png" alt="Roof Solar Panels"></span>Roof Solar Panels</a></li>
+                                                        <li><a href="service-roof-replacement.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-1.png" alt="Roof Replacement"></span>Roof Replacement</a></li>
+                                                        <li><a href="service-roof-repair.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-2.png" alt="Roof Repair"></span>Roof Repair</a></li>
+                                                        <li><a href="service-storm-damage.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-3.png" alt="Storm Damage"></span>Storm Damage &amp; Insurance</a></li>
+                                                        <li><a href="service-roof-inspections.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-4.png" alt="Roof Inspections"></span>Free Roof Inspections</a></li>
+                                                        <li><a href="service-commercial-roofing.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-5.png" alt="Commercial Roofing"></span>Commercial Roofing</a></li>
+                                                        <li><a href="service-roof-installation.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-6.png" alt="New Installation"></span>New Roof Installation</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="active"><a href="blog.html">Blog</a></li>
@@ -359,16 +359,16 @@
                                 <div class="blog__item-meta mb-10">
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     By Admin</a>
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     26 January, 2024</a>
                                 </div>
@@ -394,16 +394,16 @@
                                 <div class="blog__item-meta mb-10">
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     By Admin</a>
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     12 February, 2024</a>
                                 </div>
@@ -429,16 +429,16 @@
                                 <div class="blog__item-meta mb-10">
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     By Admin</a>
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     08 March, 2024</a>
                                 </div>
@@ -464,16 +464,16 @@
                                 <div class="blog__item-meta mb-10">
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     By Admin</a>
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     15 April, 2024</a>
                                 </div>
@@ -499,16 +499,16 @@
                                 <div class="blog__item-meta mb-10">
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     By Admin</a>
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     22 May, 2024</a>
                                 </div>
@@ -534,16 +534,16 @@
                                 <div class="blog__item-meta mb-10">
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     By Admin</a>
                                     <a href="blog-details.html">
                                     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     10 June, 2024</a>
                                 </div>
@@ -689,11 +689,11 @@
 
                                 <div class="footer__link">
                                     <ul>
-                                        <li><a href="service-roof-installation.html">Roof Installation</a></li>
-                                        <li><a href="service-damage-roofing.html">Damage Roofing</a></li>
-                                        <li><a href="service-new-roofing.html">New Roofing</a></li>
-                                        <li><a href="service-roof-renovation.html">Roof Renovation</a></li>
-                                        <li><a href="service-roof-solar-panels.html">Roof Solar Panels</a></li>
+                                        <li><a href="service-roof-replacement.html">Roof Replacement</a></li>
+                                        <li><a href="service-roof-repair.html">Roof Repair</a></li>
+                                        <li><a href="service-storm-damage.html">Storm Damage &amp; Insurance</a></li>
+                                        <li><a href="service-roof-inspections.html">Free Roof Inspections</a></li>
+                                        <li><a href="service-commercial-roofing.html">Commercial Roofing</a></li>
                                     </ul>
                                 </div>
                             </div>

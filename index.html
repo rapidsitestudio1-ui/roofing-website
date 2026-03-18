@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Services - RoofPro Professional Roofing</title>
-    <meta name="description" content="RoofPro - Professional Roofing Company">
-    <meta name="author" content="ahmmedsabbirbd">
+    <title>Amstill Roofing - Houston's Trusted Roofer Since 1974</title>
+    <meta name="description" content="Amstill Roofing - Houston's trusted roofing experts for 50+ years. 50,000+ projects completed. Owens Corning Platinum Preferred Contractor.">
+    <meta name="author" content="Amstill Roofing">
         <meta property="og:type" content="website">
-    <meta property="og:title" content="RoofPro - Professional Roofing Services">
-    <meta property="og:description" content="RoofPro - Professional Roofing Company providing expert roofing services">
+    <meta property="og:title" content="Amstill Roofing - Houston's Trusted Roofer Since 1974">
+    <meta property="og:description" content="Amstill Roofing - Family-owned roofing company serving Houston and Round Rock, TX for over 50 years.">
     <meta property="og:image" content="assets/imgs/banner/banner-1.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -37,31 +37,50 @@
         .what-we-do-2__item .title { font-size: 24px !important; }
         @media (max-width: 991px) { .banner__item-title { font-size: 42px !important; } .section__title { font-size: 36px !important; } }
         @media (max-width: 767px) { .banner__item-title { font-size: 32px !important; } .section__title { font-size: 28px !important; } .what-we-do-2__item .title { font-size: 20px !important; } }
-        /* Enhanced services dropdown */
-        .main-menu ul li.has-dropdown > a .nav-icon { margin-right: 6px; font-size: 14px; color: var(--rr-theme-primary); transition: transform 0.3s; }
-        .main-menu ul li.has-dropdown:hover > a .nav-icon { transform: rotate(10deg) scale(1.1); }
+        /* Services dropdown arrow */
         .main-menu ul li.has-dropdown > a::after { content: "" !important; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); display: inline-block; margin-left: 8px; margin-bottom: 3px; transition: transform 0.3s ease; font-size: 0 !important; }
         .main-menu ul li.has-dropdown:hover > a::after { transform: rotate(225deg) !important; }
-        .main-menu ul li .submenu { background: linear-gradient(145deg, #141414, #0d0d0d); border: 1px solid rgba(244,78,25,0.12); border-radius: 16px; padding: 10px; min-width: 310px; box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03) inset; backdrop-filter: blur(12px); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(12px); }
-        .main-menu ul li:hover > .submenu { transform: translateY(0); }
-        .main-menu ul li .submenu li { transform: none; padding: 0; margin-bottom: 2px; }
-        .main-menu ul li .submenu li:last-child { margin-bottom: 0; }
-        .main-menu ul li .submenu li a { padding: 12px 16px; border-radius: 12px; font-size: 13.5px; font-weight: 400; color: rgba(255,255,255,0.65); display: flex; align-items: center; gap: 14px; transition: all 0.25s ease; line-height: 1.3; white-space: nowrap; }
-        .main-menu ul li .submenu li a .dd-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(244,78,25,0.06); display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; flex-shrink: 0; overflow: hidden; }
-        .main-menu ul li .submenu li a .dd-icon img { width: 24px; height: 24px; object-fit: contain; filter: brightness(0) invert(0.5); transition: filter 0.3s ease; }
-        .main-menu ul li .submenu li a::before { display: none; }
-        .main-menu ul li .submenu li:hover > a { color: #fff; background: rgba(244,78,25,0.08); padding-inline-start: 16px; }
-        .main-menu ul li .submenu li:hover > a .dd-icon { background: var(--rr-theme-primary); transform: scale(1.05); }
-        .main-menu ul li .submenu li:hover > a .dd-icon img { filter: brightness(0) invert(1); }
-        .main-menu ul li .submenu li.active > a { color: var(--rr-theme-primary); padding-inline-start: 16px; }
-        .main-menu ul li .submenu li.active > a::before { display: none; }
+
+        /* Mega Menu */
+        .main-menu ul li.has-mega > .submenu { display: none !important; }
+        .main-menu ul li.has-mega { position: static !important; }
+        .main-menu ul li.has-mega > .mega-menu { position: absolute; left: 0; right: 0; top: 100%; width: 100%; background: #0d0e12; border-top: 1px solid rgba(188,24,39,0.15); box-shadow: 0 40px 80px rgba(0,0,0,0.6); z-index: 9999; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16,1,0.3,1), visibility 0.35s; pointer-events: none; }
+        .main-menu ul li.has-mega:hover > .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+        .mega__menu-wrapper { position: relative; }
+        .mega-menu__inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; min-height: 340px; }
+
+        /* Left panel — brand */
+        .mega-menu__brand { padding: 48px 44px; border-right: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; justify-content: center; }
+        .mega-menu__brand-logo { height: 52px; width: auto; margin-bottom: 28px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3)); }
+        .mega-menu__brand-heading { font-size: 17px; font-weight: 700; color: #fff; line-height: 1.5; margin-bottom: 16px; letter-spacing: -0.01em; }
+        .mega-menu__brand-text { font-size: 13.5px; color: rgba(255,255,255,0.45); line-height: 1.7; margin: 0; }
+        .mega-menu__brand-badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; padding: 6px 14px; border-radius: 20px; background: rgba(188,24,39,0.1); border: 1px solid rgba(188,24,39,0.2); font-size: 11px; font-weight: 600; color: var(--rr-theme-primary); letter-spacing: 0.05em; text-transform: uppercase; }
+        .mega-menu__brand-badge svg { flex-shrink: 0; }
+
+        /* Right panel — services grid */
+        .mega-menu__services { padding: 40px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-content: center; }
+        .mega-menu__link { display: flex; align-items: center; gap: 16px; padding: 16px 20px; border-radius: 14px; text-decoration: none; transition: all 0.25s ease; position: relative; }
+        .mega-menu__link:hover { background: rgba(188,24,39,0.07); }
+        .mega-menu__link-icon { width: 46px; height: 46px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease; }
+        .mega-menu__link:hover .mega-menu__link-icon { background: var(--rr-theme-primary); border-color: var(--rr-theme-primary); transform: scale(1.05); }
+        .mega-menu__link-icon img { width: 22px; height: 22px; object-fit: contain; filter: brightness(0) invert(0.45); transition: filter 0.3s ease; }
+        .mega-menu__link:hover .mega-menu__link-icon img { filter: brightness(0) invert(1); }
+        .mega-menu__link-text { display: flex; flex-direction: column; gap: 3px; }
+        .mega-menu__link-title { font-size: 14.5px; font-weight: 600; color: #fff; transition: color 0.2s; }
+        .mega-menu__link:hover .mega-menu__link-title { color: #fff; }
+        .mega-menu__link-desc { font-size: 12px; color: rgba(255,255,255,0.35); line-height: 1.4; }
+        .mega-menu__link:hover .mega-menu__link-desc { color: rgba(255,255,255,0.55); }
+        .mega-menu__link-arrow { position: absolute; right: 18px; top: 50%; transform: translateY(-50%) translateX(-4px); opacity: 0; transition: all 0.25s ease; color: var(--rr-theme-primary); font-size: 14px; }
+        .mega-menu__link:hover .mega-menu__link-arrow { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+        @media (max-width: 1199px) { .main-menu ul li.has-mega > .mega-menu { display: none !important; } }
 
         /* Marquee Section */
         .marquee-section { background: #0a0a0a; padding: 24px 0; overflow: hidden; position: relative; }
         .marquee-track { display: flex; width: max-content; animation: marqueeScroll 18s linear infinite; }
         .marquee-track:hover { animation-play-state: paused; }
         .marquee-item { display: flex; align-items: center; gap: 32px; padding-right: 32px; white-space: nowrap; }
-        .marquee-item span { font-family: 'Unbounded', sans-serif !important; font-size: 28px; font-weight: 900; color: transparent; letter-spacing: 4px; text-transform: uppercase; -webkit-text-stroke: 1px var(--rr-theme-primary); text-shadow: 2px 2px 0 rgba(244,78,25,0.15), -1px -1px 0 rgba(244,78,25,0.1), 0 0 8px rgba(244,78,25,0.08); position: relative; }
+        .marquee-item span { font-family: 'Unbounded', sans-serif !important; font-size: 28px; font-weight: 900; color: transparent; letter-spacing: 4px; text-transform: uppercase; -webkit-text-stroke: 1px var(--rr-theme-primary); text-shadow: 2px 2px 0 rgba(188,24,39,0.15), -1px -1px 0 rgba(188,24,39,0.1), 0 0 8px rgba(188,24,39,0.08); position: relative; }
         .marquee-item .marquee-star { flex-shrink: 0; opacity: 0.7; color: var(--rr-theme-primary); font-size: 20px; line-height: 1; }
         @keyframes marqueeScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
@@ -80,7 +99,7 @@
 
 <body class="body-1">
     <!-- Skip to main content -->
-    <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--rr-theme-primary,#F44E19);color:#fff;padding:8px 16px;z-index:10000;font-size:14px;transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+    <a href="#main-content" class="skip-link" style="position:absolute;top:-40px;left:0;background:var(--rr-theme-primary,#bc1827);color:#fff;padding:8px 16px;z-index:10000;font-size:14px;transition:top 0.3s;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
 
     <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -101,7 +120,7 @@
     <div class="preloader" data-preloader="deactive" data-loaded="progress">
         <button type="button" class="preloader-close" aria-label="Close preloader">x</button>
         <div class="wrapper w-100 text-center">
-            <div id="progress-bar" class="preloader-text" data-text="ROOFPRO"></div>
+            <div id="progress-bar" class="preloader-text" data-text="AMSTILL"></div>
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
@@ -202,7 +221,7 @@
                     <div class="mobile-menu fix"></div>
                     <div class="offcanvas__social">
                         <h4 class="offcanvas__title mb-20">Subscribe & Follow</h4>
-                        <p class="mb-30">The scallops were perfectly cooked, tender, and flavorful, paired beautifully with a creamy risotto and seasonal vegetables. The presentation was artful, showcasing the chef's attention to detail.</p>
+                        <p class="mb-30">Amstill Roofing has protected Houston homes since 1974. As an Owens Corning Platinum Preferred Contractor and GAF Master Elite Roofer, we deliver quality you can trust — backed by 50,000+ completed projects and a 4.9-star rating.</p>
                         <ul class="header-top-socail-menu d-flex">
                             <li><a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="https://www.linkedin.com/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
@@ -243,8 +262,7 @@
                         <div class="header__logo">
                             <a href="index.html">
                                 <div class="logo d-flex align-items-center justify-content-center">
-                                    <img class="d-none d-xl-block img-fluid" src="assets/imgs/logo/logo.svg" alt="logo not found">
-                                    <img class="d-block d-xl-none img-fluid" src="assets/imgs/logo/logo-white.svg" alt="logo not found">
+                                    <img src="assets/imgs/logo/logo-white.svg" alt="Amstill Roofing" style="height: 65px; width: 125px; object-fit: contain;">
                                 </div>
                             </a>
                         </div>
@@ -260,22 +278,22 @@
                                                         <path d="M14.7143 7.54545C14.7143 12.6364 7.85714 17 7.85714 17C7.85714 17 1 12.6364 1 7.54545C1 5.80949 1.72245 4.14463 3.00841 2.91712C4.29437 1.68961 6.03852 1 7.85714 1C9.67577 1 11.4199 1.68961 12.7059 2.91712C13.9918 4.14463 14.7143 5.80949 14.7143 7.54545Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                         <path d="M7.857 9.72741C9.11937 9.72741 10.1427 8.75057 10.1427 7.54559C10.1427 6.3406 9.11937 5.36377 7.857 5.36377C6.59464 5.36377 5.57129 6.3406 5.57129 7.54559C5.57129 8.75057 6.59464 9.72741 7.857 9.72741Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                     </svg>
-                                                    59 Street, Chicago, New york City
+                                                    14125 Memorial Dr, Houston, TX 77079
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-xxl-6 col-7">
                                         <ul class="header__top-menu d-flex justify-content-end">
-                                            <li><a href="tel:2455921125"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <li><a href="tel:2816128747"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10.9104 4.05809C11.6586 4.20378 12.3462 4.56898 12.8852 5.10696C13.4242 5.64494 13.7901 6.33121 13.9361 7.07795M10.9104 1C12.4648 1.17235 13.9143 1.8671 15.0209 2.97018C16.1275 4.07326 16.8254 5.5191 17 7.0703M16.234 13.1712V15.4648C16.2349 15.6777 16.1912 15.8884 16.1057 16.0835C16.0203 16.2786 15.8949 16.4537 15.7377 16.5977C15.5805 16.7416 15.3949 16.8512 15.1928 16.9194C14.9908 16.9876 14.7766 17.013 14.5642 16.9938C12.2071 16.7382 9.94297 15.9343 7.95371 14.6467C6.10295 13.4729 4.53384 11.9068 3.35779 10.0596C2.06326 8.0651 1.25765 5.79431 1.00622 3.43118C0.987076 3.21976 1.01225 3.00669 1.08014 2.80551C1.14802 2.60434 1.25713 2.41948 1.40052 2.2627C1.54391 2.10592 1.71843 1.98066 1.91298 1.89489C2.10753 1.80912 2.31785 1.76472 2.53053 1.76452H4.82849C5.20022 1.76087 5.56061 1.89226 5.84247 2.13419C6.12433 2.37613 6.30843 2.71211 6.36046 3.0795C6.45745 3.81349 6.63732 4.53418 6.89665 5.22781C6.99971 5.50145 7.02201 5.79884 6.96092 6.08474C6.89983 6.37065 6.7579 6.63308 6.55195 6.84095L5.57915 7.81189C6.66958 9.7259 8.25739 11.3107 10.1751 12.399L11.1479 11.4281C11.3561 11.2225 11.6191 11.0809 11.9055 11.0199C12.192 10.9589 12.4899 10.9812 12.7641 11.084C13.4591 11.3429 14.1811 11.5224 14.9165 11.6192C15.2886 11.6716 15.6284 11.8587 15.8713 12.1448C16.1143 12.431 16.2433 12.7962 16.234 13.1712Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                            (+245) 592 1125</a></li>
-                                            <li><a href="mailto:info@roofpro.com"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            (281) 612-8747</a></li>
+                                            <li><a href="mailto:info@amstillroofing.com"><svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M2.7 1H16.3C17.235 1 18 1.7875 18 2.75V13.25C18 14.2125 17.235 15 16.3 15H2.7C1.765 15 1 14.2125 1 13.25V2.75C1 1.7875 1.765 1 2.7 1Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M18 2.75L9.5 8.875L1 2.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
-                                            info@roofpro.com</a></li>
+                                            info@amstillroofing.com</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -288,15 +306,78 @@
                                             <ul>
                                                 <li class="active"><a href="index.html">Home</a></li>
                                                 <li><a href="about-us.html">About Us</a></li>
-                                                <li class="has-dropdown"><a href="service.html">Services</a>
+                                                <li class="has-dropdown has-mega"><a href="service.html">Services</a>
                                                     <ul class="submenu">
-                                                        <li><a href="service-details.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-1.png" alt="Modified Roofing"></span>Modified Roofing</a></li>
-                                                        <li><a href="service-roof-installation.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-2.png" alt="Roof Installation"></span>Roof Installation</a></li>
-                                                        <li><a href="service-damage-roofing.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-3.png" alt="Damage Roofing"></span>Damage Roofing</a></li>
-                                                        <li><a href="service-new-roofing.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-4.png" alt="New Roofing"></span>New Roofing</a></li>
-                                                        <li><a href="service-roof-renovation.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-5.png" alt="Roof Renovation"></span>Roof Renovation</a></li>
-                                                        <li><a href="service-roof-solar-panels.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-6.png" alt="Roof Solar Panels"></span>Roof Solar Panels</a></li>
+                                                        <li><a href="service-roof-replacement.html">Roof Replacement</a></li>
+                                                        <li><a href="service-roof-repair.html">Roof Repair</a></li>
+                                                        <li><a href="service-storm-damage.html">Storm Damage & Insurance</a></li>
+                                                        <li><a href="service-roof-inspections.html">Free Roof Inspections</a></li>
+                                                        <li><a href="service-commercial-roofing.html">Commercial Roofing</a></li>
+                                                        <li><a href="service-roof-installation.html">New Roof Installation</a></li>
                                                     </ul>
+                                                    <div class="mega-menu">
+                                                        <div class="mega-menu__inner">
+                                                            <div class="mega-menu__brand">
+                                                                <img src="assets/imgs/logo/logo-white.svg" alt="Amstill Roofing" class="mega-menu__brand-logo">
+                                                                <h3 class="mega-menu__brand-heading">Houston's Trusted Roofer<br>Since 1974</h3>
+                                                                <p class="mega-menu__brand-text">Family-owned for over 50 years. Owens Corning Platinum Preferred Contractor and GAF Master Elite Roofer serving Houston and Round Rock, TX.</p>
+                                                                <span class="mega-menu__brand-badge">
+                                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" fill="currentColor"/></svg>
+                                                                    4.9 Stars — 1,400+ Reviews
+                                                                </span>
+                                                            </div>
+                                                            <div class="mega-menu__services">
+                                                                <a href="service-roof-replacement.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/icon-1.png" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Roof Replacement</span>
+                                                                        <span class="mega-menu__link-desc">Complete tear-off and premium rebuild</span>
+                                                                    </span>
+                                                                    <span class="mega-menu__link-arrow">&#8594;</span>
+                                                                </a>
+                                                                <a href="service-roof-repair.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/icon-2.png" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Roof Repair</span>
+                                                                        <span class="mega-menu__link-desc">Fast emergency and scheduled repairs</span>
+                                                                    </span>
+                                                                    <span class="mega-menu__link-arrow">&#8594;</span>
+                                                                </a>
+                                                                <a href="service-storm-damage.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/icon-3.png" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Storm Damage & Insurance</span>
+                                                                        <span class="mega-menu__link-desc">Full claims handling from start to finish</span>
+                                                                    </span>
+                                                                    <span class="mega-menu__link-arrow">&#8594;</span>
+                                                                </a>
+                                                                <a href="service-roof-inspections.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/icon-4.png" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Free Roof Inspections</span>
+                                                                        <span class="mega-menu__link-desc">No-obligation expert assessment</span>
+                                                                    </span>
+                                                                    <span class="mega-menu__link-arrow">&#8594;</span>
+                                                                </a>
+                                                                <a href="service-commercial-roofing.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/icon-5.png" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Commercial Roofing</span>
+                                                                        <span class="mega-menu__link-desc">Flat roofs, coatings, and commercial systems</span>
+                                                                    </span>
+                                                                    <span class="mega-menu__link-arrow">&#8594;</span>
+                                                                </a>
+                                                                <a href="service-roof-installation.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/icon-6.png" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">New Roof Installation</span>
+                                                                        <span class="mega-menu__link-desc">Asphalt, metal, tile, slate, and flat</span>
+                                                                    </span>
+                                                                    <span class="mega-menu__link-arrow">&#8594;</span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                                 <li><a href="blog.html">Blog</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
@@ -386,12 +467,12 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="banner__item-content">
-                                            <h4 class="banner__item-sub-title color-white rr-fw-medium text-decoration-underline mb-25">Collaborate With Us</h4>
+                                            <h4 class="banner__item-sub-title color-white rr-fw-medium text-decoration-underline mb-25">Houston's Trusted Roofer Since 1974</h4>
                                             <h1 class="banner__item-title h1-70 rr-fw-bold color-white mb-10 rr-br-hidden-md">
-                                                We Build Your Dream <br> With Pasion.
+                                                Protecting Houston Homes <br> For Over 50 Years.
                                             </h1>
-                                            <p class="des color-white rr-br-hidden-md mb-35">We conduct all business with the highest standards of honesty and
-                                                <br> fairness, we can be trusted for constution.</p>
+                                            <p class="des color-white rr-br-hidden-md mb-35">Family-owned, award-winning roofing with 50,000+ projects completed.
+                                                <br> Owens Corning Platinum Preferred. BBB A+ Rated. 4.9-Star Reviews.</p>
 
                                             <div class="banner__item-content-link d-flex align-items-center flex-wrap">
                                                 <a href="contact.html" class="rr-btn">
@@ -403,7 +484,7 @@
                                                 <a href="https://www.youtube.com/watch?v=mbwuj58UEPg" class="popup-video d-flex align-items-center rr-fw-medium" data-effect="mfp-move-from-top vertical-middle">
                                                     <div class="icon playVideo">
                                                         <svg class="rr-zooming" width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="#F44E19"/>
+                                                        <path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="#bc1827"/>
                                                     </svg>
                                                     </div>
                                                     Play Now
@@ -426,12 +507,12 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="banner__item-content">
-                                            <h4 class="banner__item-sub-title color-white rr-fw-sbold text-decoration-underline mb-25">Collaborate With Us</h4>
+                                            <h4 class="banner__item-sub-title color-white rr-fw-sbold text-decoration-underline mb-25">Houston's Trusted Roofer Since 1974</h4>
                                             <h1 class="banner__item-title h1-70 rr-fw-bold color-white mb-10 rr-br-hidden-lg">
-                                                We Build Your Dream <br> With Pasion.
+                                                Protecting Houston Homes <br> For Over 50 Years.
                                             </h1>
-                                            <p class="des color-white rr-br-hidden-lg mb-35">We conduct all business with the highest standards of honesty and
-                                                <br> fairness, we can be trusted for constution.</p>
+                                            <p class="des color-white rr-br-hidden-lg mb-35">Family-owned, award-winning roofing with 50,000+ projects completed.
+                                                <br> Owens Corning Platinum Preferred. BBB A+ Rated. 4.9-Star Reviews.</p>
 
                                             <div class="banner__item-content-link d-flex align-items-center flex-wrap">
                                                 <a href="contact.html" class="rr-btn">
@@ -443,7 +524,7 @@
                                                 <a href="https://www.youtube.com/watch?v=mbwuj58UEPg" class="popup-video d-flex align-items-center rr-fw-medium" data-effect="mfp-move-from-top vertical-middle">
                                                     <div class="icon playVideo">
                                                         <svg class="rr-zooming" width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="#F44E19"/>
+                                                        <path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="#bc1827"/>
                                                     </svg>
                                                     </div>
                                                     Play Now
@@ -466,12 +547,12 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="banner__item-content">
-                                            <h4 class="banner__item-sub-title color-white rr-fw-sbold text-decoration-underline mb-25">Collaborate With Us</h4>
+                                            <h4 class="banner__item-sub-title color-white rr-fw-sbold text-decoration-underline mb-25">Houston's Trusted Roofer Since 1974</h4>
                                             <h1 class="banner__item-title h1-70 rr-fw-bold color-white mb-10 rr-br-hidden-lg">
-                                                We Build Your Dream <br> With Pasion.
+                                                Protecting Houston Homes <br> For Over 50 Years.
                                             </h1>
-                                            <p class="des color-white rr-br-hidden-lg mb-35">We conduct all business with the highest standards of honesty and
-                                                <br> fairness, we can be trusted for constution.</p>
+                                            <p class="des color-white rr-br-hidden-lg mb-35">Family-owned, award-winning roofing with 50,000+ projects completed.
+                                                <br> Owens Corning Platinum Preferred. BBB A+ Rated. 4.9-Star Reviews.</p>
 
                                             <div class="banner__item-content-link d-flex align-items-center flex-wrap">
                                                 <a href="contact.html" class="rr-btn">
@@ -483,7 +564,7 @@
                                                 <a href="https://www.youtube.com/watch?v=mbwuj58UEPg" class="popup-video d-flex align-items-center rr-fw-medium" data-effect="mfp-move-from-top vertical-middle">
                                                     <div class="icon playVideo">
                                                         <svg class="rr-zooming" width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="#F44E19"/>
+                                                        <path d="M15 9L0 17.6603L0 0.339746L15 9Z" fill="#bc1827"/>
                                                     </svg>
                                                     </div>
                                                     Play Now
@@ -518,20 +599,20 @@
         <!-- Marquee Section -->
         <div class="marquee-section">
             <div class="marquee-track">
-                <div class="marquee-item"><span>MAINTENANCE</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>ROOFING</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>GUTTERS</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>SIDING</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>REPAIRS</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>INSTALLATION</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>RENOVATION</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>MAINTENANCE</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>ROOFING</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>GUTTERS</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>SIDING</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>REPAIRS</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>INSTALLATION</span><span class="marquee-star">&#10022;</span></div>
-                <div class="marquee-item"><span>RENOVATION</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>ROOF REPLACEMENT</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>STORM DAMAGE</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>ASPHALT SHINGLES</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>METAL ROOFING</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>TILE & SLATE</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>FLAT ROOFING</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>FREE INSPECTIONS</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>ROOF REPLACEMENT</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>STORM DAMAGE</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>ASPHALT SHINGLES</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>METAL ROOFING</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>TILE & SLATE</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>FLAT ROOFING</span><span class="marquee-star">&#10022;</span></div>
+                <div class="marquee-item"><span>FREE INSPECTIONS</span><span class="marquee-star">&#10022;</span></div>
             </div>
         </div>
         <!-- Marquee Section end -->
@@ -575,7 +656,7 @@
                                             </div>
                                             <div class="c-text">
                                                 <p>
-                                                    .25 YEARS OF EXPERIENCE .25 YEARS OF EXPERIENCE
+                                                    .50+ YEARS OF EXPERIENCE .50+ YEARS OF EXPERIENCE
                                                 </p>
                                             </div>
                                         </div>
@@ -587,17 +668,17 @@
                     <div class="col-xl-6">
                         <div class="section__title-wrapper text-center text-xl-start pl-30 rr-pl-none-lg rr-mb-60-lg">
                             <span class="section__subtitle justify-content-start mb-13"><span data-width="40px" class="left-separetor"></span>About Us</span>
-                            <h2 class="section__title title-animation text-capitalize mb-15 mb-xs-10 rr-br-hidden-md" data-cursor="-opaque">A Company To Change <br> The World We're Driller Industrial.</h2>
-                            <p class="mb-45 mb-xs-30">Proactively pontificate client-centered relationships vis-a-vis process centric leadership skills. Credibly maintain focused internal or “organic” sources rather than vertical alignments.</p>
+                            <h2 class="section__title title-animation text-capitalize mb-15 mb-xs-10 rr-br-hidden-md" data-cursor="-opaque">A Family Legacy of Quality <br> Roofing Across Houston & Austin.</h2>
+                            <p class="mb-45 mb-xs-30">Founded in 1974 by Frank Stilley, Amstill Roofing is now in its second generation under CEO Sam Stilley. We are committed to the enrichment of our staff, the service provided to our clients, and improving the prosperity of our local communities.</p>
 
                             <ul class="about-us__list mb-25">
-                                <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>                                    Market Research
+                                <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>                                    Residential Roof Replacement
                                 </li>
-                                <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>                                    Industrial manufacturing
+                                <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>                                    Storm Damage & Insurance Claims
                                 </li>
-                                <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>                                    Pre-construction services
+                                <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>                                    Free Roof Inspections & Estimates
                                 </li>
-                                <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>                                    Building and construction
+                                <li><span><svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.002 1L5.22195 11L1.00195 6.5" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>                                    Commercial Roofing & Coatings
                                 </li>
                             </ul>
 
@@ -628,7 +709,7 @@
                 font-weight: 600;
                 letter-spacing: .15em;
                 text-transform: uppercase;
-                color: var(--rr-theme-primary, #F44E19);
+                color: var(--rr-theme-primary, #bc1827);
                 margin-bottom: 16px;
             }
             .comp-subtitle::before,
@@ -636,7 +717,7 @@
                 content: '';
                 width: 40px;
                 height: 2px;
-                background: var(--rr-theme-primary, #F44E19);
+                background: var(--rr-theme-primary, #bc1827);
             }
             .comp-heading {
                 font-size: 42px;
@@ -649,7 +730,7 @@
                 font-size: 16px;
                 font-weight: 500;
                 font-style: italic;
-                color: var(--rr-theme-primary, #F44E19);
+                color: var(--rr-theme-primary, #bc1827);
             }
             .comp-desc {
                 color: #a0a0a0;
@@ -720,8 +801,8 @@
             .comp-handle-line {
                 width: 3px;
                 height: 100%;
-                background: var(--rr-theme-primary, #F44E19);
-                box-shadow: 0 0 12px rgba(244,78,25,.4);
+                background: var(--rr-theme-primary, #bc1827);
+                box-shadow: 0 0 12px rgba(188,24,39,.4);
             }
             .comp-handle-knob {
                 position: absolute;
@@ -731,7 +812,7 @@
                 width: 52px;
                 height: 52px;
                 border-radius: 50%;
-                background: var(--rr-theme-primary, #F44E19);
+                background: var(--rr-theme-primary, #bc1827);
                 border: 4px solid #fff;
                 display: flex;
                 align-items: center;
@@ -758,7 +839,7 @@
                         <span class="comp-drag-hint">Drag to reveal the transformation</span>
                     </div>
                     <div class="col-lg-5 col-md-5 wow fadeInRight" data-wow-delay=".3s">
-                        <p class="comp-desc">Our expert team transforms worn, damaged roofs into durable, beautiful protection for your home. See real results from our recent projects.</p>
+                        <p class="comp-desc">Our expert crew transforms storm-damaged and aging roofs into durable, beautiful protection for your Houston home. See real results from our 50,000+ completed projects.</p>
                     </div>
                 </div>
                 <!-- Slider -->
@@ -879,8 +960,8 @@
                                 <img loading="lazy" src="assets/imgs/what-we-do-2/what-we-do-2__item-1.png" alt="">
                             </div>
                             <div class="mt-auto">
-                                <h4 class="title mb-15"><a href="service-apartment-design.html">Apartment Design</a></h4>
-                                <p class="mb-0 rr-p-16">Custom layout planning and interior design tailored to modern living spaces.</p>
+                                <h4 class="title mb-15"><a href="service-roof-replacement.html">Roof Replacement</a></h4>
+                                <p class="mb-0 rr-p-16">Complete tear-off and replacement with premium materials. 50-year manufacturer warranty. 50,000+ roofs completed.</p>
                             </div>
                         </div>
                     </div>
@@ -896,8 +977,8 @@
                                 <img loading="lazy" src="assets/imgs/what-we-do-2/what-we-do-2__item-2.png" alt="">
                             </div>
                             <div class="mt-auto">
-                                <h4 class="title mb-15"><a href="service-repair-painting.html">Repair & Painting</a></h4>
-                                <p class="mb-0 rr-p-16">Professional surface repair and premium painting to restore your property's finish.</p>
+                                <h4 class="title mb-15"><a href="service-roof-repair.html">Roof Repair</a></h4>
+                                <p class="mb-0 rr-p-16">Emergency and scheduled repairs for leaks, storm damage, and wear — fast response, lasting results.</p>
                             </div>
                         </div>
                     </div>
@@ -913,8 +994,8 @@
                                 <img loading="lazy" src="assets/imgs/what-we-do-2/what-we-do-2__item-3.png" alt="">
                             </div>
                             <div class="mt-auto">
-                                <h4 class="title mb-15"><a href="service-roof-installation.html">Roof Installation</a></h4>
-                                <p class="mb-0 rr-p-16">Full roof installations using durable materials built to withstand any climate.</p>
+                                <h4 class="title mb-15"><a href="service-storm-damage.html">Storm Damage & Insurance</a></h4>
+                                <p class="mb-0 rr-p-16">Houston storm damage experts. We handle your insurance claim from start to finish — hassle-free restoration.</p>
                             </div>
                         </div>
                     </div>
@@ -930,8 +1011,8 @@
                                 <img loading="lazy" src="assets/imgs/what-we-do-2/what-we-do-2__item-4.png" alt="">
                             </div>
                             <div class="mt-auto">
-                                <h4 class="title mb-15"><a href="service-roof-renovation.html">Roof Renovation</a></h4>
-                                <p class="mb-0 rr-p-16">Complete roof overhauls that extend your roof's life and boost curb appeal.</p>
+                                <h4 class="title mb-15"><a href="service-roof-inspections.html">Free Roof Inspections</a></h4>
+                                <p class="mb-0 rr-p-16">Comprehensive roof assessment with honest recommendations. No pressure, no obligation — just expert advice.</p>
                             </div>
                         </div>
                     </div>
@@ -947,8 +1028,8 @@
                                 <img loading="lazy" src="assets/imgs/what-we-do-2/what-we-do-2__item-5.png" alt="">
                             </div>
                             <div class="mt-auto">
-                                <h4 class="title mb-15"><a href="service-expert-mechanical.html">Expert Mechanical</a></h4>
-                                <p class="mb-0 rr-p-16">Skilled HVAC and mechanical systems work for reliable home comfort year-round.</p>
+                                <h4 class="title mb-15"><a href="service-commercial-roofing.html">Commercial Roofing</a></h4>
+                                <p class="mb-0 rr-p-16">Flat roofs, coatings, and commercial systems for businesses across Houston and Round Rock.</p>
                             </div>
                         </div>
                     </div>
@@ -964,8 +1045,8 @@
                                 <img loading="lazy" src="assets/imgs/what-we-do-2/what-we-do-2__item-6.png" alt="">
                             </div>
                             <div class="mt-auto">
-                                <h4 class="title mb-15"><a href="service-architecture-building.html">Architecture & Building</a></h4>
-                                <p class="mb-0 rr-p-16">End-to-end architectural planning and construction for residential projects.</p>
+                                <h4 class="title mb-15"><a href="service-roof-installation.html">New Roof Installation</a></h4>
+                                <p class="mb-0 rr-p-16">Asphalt, metal, tile, slate, and flat — expert installation with on-site supervision and clean job sites.</p>
                             </div>
                         </div>
                     </div>
@@ -1092,8 +1173,8 @@
                                     <img loading="lazy" src="assets/imgs/experience/experience__item-1.png" alt="">
                                 </div>
                                 <div class="experience__item-text">
-                                    <h2 class="experience__item-text-title color-white"><span class="odometer" data-count="1.2">0</span>m+</h2>
-                                    <h4 class="color-white rr-fw-sbold mb-0">Projects Done</h4>
+                                    <h2 class="experience__item-text-title color-white"><span class="odometer" data-count="50">0</span>k+</h2>
+                                    <h4 class="color-white rr-fw-sbold mb-0">Roofs Completed</h4>
                                 </div>
                             </div>
 
@@ -1102,8 +1183,8 @@
                                     <img loading="lazy" src="assets/imgs/experience/experience__item-2.png" alt="">
                                 </div>
                                 <div class="experience__item-text">
-                                    <h2 class="experience__item-text-title color-white"><span class="odometer" data-count="51">0</span>k+</h2>
-                                    <h4 class="color-white rr-fw-sbold mb-0">Satisfied Clients</h4>
+                                    <h2 class="experience__item-text-title color-white"><span class="odometer" data-count="1400">0</span>+</h2>
+                                    <h4 class="color-white rr-fw-sbold mb-0">5-Star Reviews</h4>
                                 </div>
                             </div>
 
@@ -1112,8 +1193,8 @@
                                     <img loading="lazy" src="assets/imgs/experience/experience__item-3.png" alt="">
                                 </div>
                                 <div class="experience__item-text">
-                                    <h2 class="experience__item-text-title color-white"><span class="odometer" data-count="25">0</span> +</h2>
-                                    <h4 class="color-white rr-fw-sbold mb-0">Years Experience</h4>
+                                    <h2 class="experience__item-text-title color-white"><span class="odometer" data-count="50">0</span>+</h2>
+                                    <h4 class="color-white rr-fw-sbold mb-0">Years of Excellence</h4>
                                 </div>
                             </div>
                         </div>
@@ -1134,7 +1215,7 @@
                     <div class="col-12">
                         <div class="section__title-wrapper text-center mb-60 mb-sm-40 mb-xs-35">
                             <span class="section__subtitle justify-content-center mb-13 ml-0"><span data-width="40px" class="left-separetor"></span>Why Choose Us<span data-width="40px" class="right-separetor"></span></span>
-                            <h2 class="section__title title-animation text-capitalize rr-br-hidden-md" data-cursor="-opaque">Efficient Affordable Solutions</h2>
+                            <h2 class="section__title title-animation text-capitalize rr-br-hidden-md" data-cursor="-opaque">Why Houston Homeowners Trust Amstill</h2>
                         </div>
                     </div>
                 </div>
@@ -1155,8 +1236,8 @@
                             </svg>
                             </div>
                             <div class="why-choose-us-2__text">
-                                <h4 class="mb-10"><a href="service-details.html">Modified Roofing</a></h4>
-                                <p class="mb-0">Giving consultancy for every financial projection report and analysis for existing project</p>
+                                <h4 class="mb-10"><a href="service-details.html">Owens Corning Platinum</a></h4>
+                                <p class="mb-0">Top 1% of roofing contractors nationwide. Premium materials with 50-year manufacturer warranty coverage.</p>
                             </div>
                         </div>
                     </div>
@@ -1174,8 +1255,8 @@
                             </svg>
                             </div>
                             <div class="why-choose-us-2__text">
-                                <h4 class="mb-10"><a href="service-roof-installation.html">Roof Installation</a></h4>
-                                <p class="mb-0">Giving consultancy for every financial projection report and analysis for existing project</p>
+                                <h4 class="mb-10"><a href="service-roof-installation.html">GAF Master Elite</a></h4>
+                                <p class="mb-0">Top 2% of roofers in North America. Factory-certified installations with industry-best warranties.</p>
                             </div>
                         </div>
                     </div>
@@ -1196,8 +1277,8 @@
                             </svg>
                             </div>
                             <div class="why-choose-us-2__text">
-                                <h4 class="mb-10"><a href="service-damage-roofing.html">Damage Roofing</a></h4>
-                                <p class="mb-0">Giving consultancy for every financial projection report and analysis for existing project</p>
+                                <h4 class="mb-10"><a href="service-damage-roofing.html">Storm Damage Experts</a></h4>
+                                <p class="mb-0">Fast emergency response for Houston storm damage. We handle insurance claims from start to finish.</p>
                             </div>
                         </div>
                     </div>
@@ -1219,8 +1300,8 @@
 
                             </div>
                             <div class="why-choose-us-2__text">
-                                <h4 class="mb-10"><a href="service-new-roofing.html">New Roofing</a></h4>
-                                <p class="mb-0">Giving consultancy for every financial projection report and analysis for existing project</p>
+                                <h4 class="mb-10"><a href="service-new-roofing.html">BBB A+ Rated</a></h4>
+                                <p class="mb-0">Accredited since 1986 with A+ rating. Award-winning customer service and transparent pricing.</p>
                             </div>
                         </div>
                     </div>
@@ -1238,8 +1319,8 @@
                             </svg>
                             </div>
                             <div class="why-choose-us-2__text">
-                                <h4 class="mb-10"><a href="service-roof-renovation.html">Roof Renovation</a></h4>
-                                <p class="mb-0">Giving consultancy for every financial projection report and analysis for existing project</p>
+                                <h4 class="mb-10"><a href="service-roof-renovation.html">5-Year Workmanship Warranty</a></h4>
+                                <p class="mb-0">Every project backed by our 5-year workmanship guarantee on top of manufacturer coverage.</p>
                             </div>
                         </div>
                     </div>
@@ -1265,8 +1346,8 @@
                             </svg>
                             </div>
                             <div class="why-choose-us-2__text">
-                                <h4 class="mb-10"><a href="service-roof-solar-panels.html">Roof Solar Panels</a></h4>
-                                <p class="mb-0">Giving consultancy for every financial projection report and analysis for existing project</p>
+                                <h4 class="mb-10"><a href="service-roof-solar-panels.html">Bilingual Service</a></h4>
+                                <p class="mb-0">Serving Houston's diverse community with full English and Spanish support throughout your project.</p>
                             </div>
                         </div>
                     </div>
@@ -1498,7 +1579,7 @@
                     <div class="col-12">
                         <div class="section__title-wrapper text-center mb-60 mb-sm-40 mb-xs-35">
                             <span class="section__subtitle justify-content-center mb-13 ml-0"><span data-width="40px" class="left-separetor"></span>Working People<span data-width="40px" class="right-separetor"></span></span>
-                            <h2 class="section__title title-animation text-capitalize rr-br-hidden-md" data-cursor="-opaque">Our Awesome Creative Best
+                            <h2 class="section__title title-animation text-capitalize rr-br-hidden-md" data-cursor="-opaque">Meet the Amstill Roofing
                                 <br> Team Members</h2>
                         </div>
                     </div>
@@ -1520,8 +1601,8 @@
                                 </div>
 
                                 <div class="team__item-text__left">
-                                    <h4 class="team__item-title rr-fw-bold color-white mb-0">James Williams</h4>
-                                    <span class="team__item-subtitle color-white">Operations Manager</span>
+                                    <h4 class="team__item-title rr-fw-bold color-white mb-0">Sam Stilley</h4>
+                                    <span class="team__item-subtitle color-white">CEO</span>
                                 </div>
                                 <div class="team__item-text__right">
                                     <button><img loading="lazy" src="assets/imgs/icon/share.svg" alt=""></button>
@@ -1545,8 +1626,8 @@
                                 </div>
 
                                 <div class="team__item-text__left">
-                                    <h4 class="team__item-title rr-fw-bold color-white mb-0">Anthony Notson</h4>
-                                    <span class="team__item-subtitle color-white">Production Manager</span>
+                                    <h4 class="team__item-title rr-fw-bold color-white mb-0">Frank Stilley</h4>
+                                    <span class="team__item-subtitle color-white">Founder & President</span>
                                 </div>
                                 <div class="team__item-text__right">
                                     <button><img loading="lazy" src="assets/imgs/icon/share.svg" alt=""></button>
@@ -1570,8 +1651,8 @@
                                 </div>
 
                                 <div class="team__item-text__left">
-                                    <h4 class="team__item-title rr-fw-bold color-white mb-0">Joseph Crawford</h4>
-                                    <span class="team__item-subtitle color-white">Chief Marketing</span>
+                                    <h4 class="team__item-title rr-fw-bold color-white mb-0">Matt Brewster</h4>
+                                    <span class="team__item-subtitle color-white">Roofing Consultant Manager</span>
                                 </div>
                                 <div class="team__item-text__right">
                                     <button><img loading="lazy" src="assets/imgs/icon/share.svg" alt=""></button>
@@ -1595,7 +1676,7 @@
                             </div>
                             <div class="contact-list__item-text">
                                 <h4 class="title">Phone Number</h4>
-                                <a href="tel:556545455418">(+55) 654 - 545 - 5418</a>
+                                <a href="tel:2816128747">(281) 612-8747</a>
                             </div>
                         </div>
                     </div>
@@ -1606,7 +1687,7 @@
                             </div>
                             <div class="contact-list__item-text">
                                 <h4 class="title">Email Address</h4>
-                                <a href="mailto:info@ribuild.com">info@ribuild.com</a>
+                                <a href="mailto:info@amstillroofing.com">info@amstillroofing.com</a>
                             </div>
                         </div>
                     </div>
@@ -1617,7 +1698,7 @@
                             </div>
                             <div class="contact-list__item-text">
                                 <h4 class="title">Our Location</h4>
-                                <a href="https://maps.app.goo.gl/1pAfbZwztHjEGrG88">4821, Anchor St, USA.</a>
+                                <a href="https://maps.app.goo.gl/9hh72CHKKm2R34uKA">14125 Memorial Dr, Houston, TX</a>
                             </div>
                         </div>
                     </div>
@@ -1628,7 +1709,7 @@
                             </div>
                             <div class="contact-list__item-text">
                                 <h4 class="title">Opening Hour </h4>
-                                <span>Mon - Fri: 09am - 07pm</span>
+                                <span>Open 24/7, Monday - Sunday</span>
                             </div>
                         </div>
                     </div>
@@ -1647,7 +1728,7 @@
                             <div class="section__title-wrapper text-center text-xl-start">
                                 <span class="section__subtitle justify-content-start mb-13"><span data-width="40px" class="left-separetor"></span>Lets Talk</span>
                                 <h2 class="section__title title-animation mb-20 rr-br-hidden-md" data-cursor="-opaque">Have a Project in Mind? Contact With Us</h2>
-                                <p class="des mb-35">If you are going to use a passage of Lorem Ipsu, you need this be sure there isn't anything embarrassing hidden</p>
+                                <p class="des mb-35">Ready for a free roof inspection? Our team will assess your roof and provide an honest, no-pressure recommendation</p>
 
                                 <div class="request-a-quote__meta d-flex align-items-center justify-content-center justify-content-xl-start">
                                     <div class="request-a-quote__meta-img">
@@ -1655,8 +1736,8 @@
                                     </div>
 
                                     <div class="request-a-quote__meta-content">
-                                        <h5 class="title">Hozian Smith</h5>
-                                        <span class="position">Support Manager</span>
+                                        <h5 class="title">Destiny Miller</h5>
+                                        <span class="position">Office Manager</span>
                                     </div>
                                 </div>
                             </div>
@@ -1737,7 +1818,7 @@
         <!-- testimonial area start -->
         <section id="testimonial" class="testimonial section-space__top overflow-hidden">
             <div class="container position-relative b-t__scroll-container-2">
-                <div class="big-text__scroll-2 b-t__scroll" data-target=".b-t__scroll-container-2" data-target-height="30">RIBUILD</div>
+                <div class="big-text__scroll-2 b-t__scroll" data-target=".b-t__scroll-container-2" data-target-height="30">AMSTILL ROOFING</div>
                 <div class="row position-relative z-99">
                     <div class="col-12">
                         <div class="section__title-wrapper text-center mb-60 mb-sm-40 mb-xs-35">
@@ -1758,8 +1839,7 @@
                                                 <img loading="lazy" src="assets/imgs/testimonial/qotetion.png" alt="">
                                             </div>
                                             <div class="testimonial__item-content">
-                                                <p class="mb-20 mb-xs-15">We are an architecture firm with a focus on beautiful but functional design. At its heart, we believe design is about usability and accessibility — these are the guiding principles for our work. Read projects,
-                                                    our process and our team below.</p>
+                                                <p class="mb-20 mb-xs-15">Amstill Roofing replaced our entire roof after storm damage. From the first call to the final cleanup, every step was professional and stress-free. They handled our insurance claim perfectly and the crew was outstanding. Our new roof looks incredible and we have complete peace of mind.</p>
 
                                                 <div class="testimonial__item-author d-flex align-items-center">
                                                     <div class="testimonial__item-author-content d-flex flex-column">
@@ -1770,7 +1850,7 @@
                                                             <li><img loading="lazy" src="assets/imgs/testimonial/start.png" alt="image not found"></li>
                                                             <li><img loading="lazy" src="assets/imgs/testimonial/start.png" alt="image not found"></li>
                                                         </ul>
-                                                        <h4 class="testimonial__item-author-title">Carlton Trapp</h4>
+                                                        <h4 class="testimonial__item-author-title">Verified Google Review — 4.9 Stars</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1782,12 +1862,12 @@
                             <div class="testimonial__slider__arrow">
                                 <button type="button" aria-label="Previous testimonial" class="testimonial__slider__arrow-prev">
                                 <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0719888 6.69445L5.55761 12.9194C5.65227 13.0269 5.80579 13.0269 5.90045 12.9194L6.929 11.7523C7.02367 11.6447 7.02367 11.4706 6.929 11.3632L2.64342 6.5L6.929 1.6368C7.02367 1.52937 7.02367 1.35517 6.929 1.24775L5.90045 0.0805682C5.80579 -0.0268561 5.65227 -0.0268561 5.55761 0.0805682L0.0719888 6.30555C-0.0239957 6.41447 -0.0239957 6.58568 0.0719888 6.6946L0.0719888 6.69445Z" fill="#F44E19"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.0719888 6.69445L5.55761 12.9194C5.65227 13.0269 5.80579 13.0269 5.90045 12.9194L6.929 11.7523C7.02367 11.6447 7.02367 11.4706 6.929 11.3632L2.64342 6.5L6.929 1.6368C7.02367 1.52937 7.02367 1.35517 6.929 1.24775L5.90045 0.0805682C5.80579 -0.0268561 5.65227 -0.0268561 5.55761 0.0805682L0.0719888 6.30555C-0.0239957 6.41447 -0.0239957 6.58568 0.0719888 6.6946L0.0719888 6.69445Z" fill="#bc1827"/>
                                 </svg>
                             </button>
                                 <button type="button" aria-label="Next testimonial" class="testimonial__slider__arrow-next">
                                 <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.91773 6.69445L1.64845 12.9194C1.54026 13.0269 1.36481 13.0269 1.25663 12.9194L0.0811411 11.7523C-0.0270477 11.6447 -0.0270477 11.4706 0.0811411 11.3632L4.97895 6.5L0.0811415 1.6368C-0.0270473 1.52937 -0.0270473 1.35517 0.0811416 1.24775L1.25663 0.0805683C1.36482 -0.026856 1.54026 -0.026856 1.64845 0.0805683L7.91773 6.30555C8.02742 6.41447 8.02742 6.58568 7.91773 6.6946L7.91773 6.69445Z" fill="#F44E19"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.91773 6.69445L1.64845 12.9194C1.54026 13.0269 1.36481 13.0269 1.25663 12.9194L0.0811411 11.7523C-0.0270477 11.6447 -0.0270477 11.4706 0.0811411 11.3632L4.97895 6.5L0.0811415 1.6368C-0.0270473 1.52937 -0.0270473 1.35517 0.0811416 1.24775L1.25663 0.0805683C1.36482 -0.026856 1.54026 -0.026856 1.64845 0.0805683L7.91773 6.30555C8.02742 6.41447 8.02742 6.58568 7.91773 6.6946L7.91773 6.69445Z" fill="#bc1827"/>
                                 </svg>
                             </button>
                             </div>
@@ -1842,16 +1922,16 @@
                                             <div class="blog__item-meta mb-10">
                                                 <a href="blog-details.html">
                                                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                                 By Admin</a>
                                                 <a href="blog-details.html">
                                                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                                 26 January, 2024</a>
                                             </div>
@@ -1876,16 +1956,16 @@
                                             <div class="blog__item-meta mb-10">
                                                 <a href="blog-details.html">
                                                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                                 By Admin</a>
                                                 <a href="blog-details.html">
                                                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                                 26 January, 2024</a>
                                             </div>
@@ -1910,16 +1990,16 @@
                                             <div class="blog__item-meta mb-10">
                                                 <a href="blog-details.html">
                                                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M14 14.9999V13.4444C14 12.6192 13.6576 11.8279 13.0481 11.2445C12.4386 10.661 11.612 10.3333 10.75 10.3333H4.25C3.38805 10.3333 2.5614 10.661 1.9519 11.2445C1.34241 11.8279 1 12.6192 1 13.4444V14.9999" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M7.5 7.22222C9.29493 7.22222 10.75 5.82933 10.75 4.11111C10.75 2.39289 9.29493 1 7.5 1C5.70507 1 4.25 2.39289 4.25 4.11111C4.25 5.82933 5.70507 7.22222 7.5 7.22222Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                                 By Admin</a>
                                                 <a href="blog-details.html">
                                                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M10.3887 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M4.61133 1V3.8" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                                    <path d="M1 6.6001H14" stroke="#F44E19" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M12.5556 2.3999H2.44444C1.6467 2.3999 1 3.0267 1 3.7999V13.5999C1 14.3731 1.6467 14.9999 2.44444 14.9999H12.5556C13.3533 14.9999 14 14.3731 14 13.5999V3.7999C14 3.0267 13.3533 2.3999 12.5556 2.3999Z" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10.3887 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M4.61133 1V3.8" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M1 6.6001H14" stroke="#bc1827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                                 </svg>
                                                 26 January, 2024</a>
                                             </div>
@@ -2036,7 +2116,7 @@
                                 </div>
 
                                 <div class="footer__content mb-30 mb-xs-35">
-                                    <p class="mb-0">Officia deserunt mollitia animi, id est laborum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est</p>
+                                    <p class="mb-0">Amstill Roofing has been Houston's trusted roofing partner since 1974. Family-owned and operated for over 50 years, we deliver quality craftsmanship backed by industry-leading warranties. Serving Houston and Round Rock, TX.</p>
                                 </div>
 
                                 <div class="footer__social">
@@ -2073,11 +2153,11 @@
 
                                 <div class="footer__link">
                                     <ul>
-                                        <li><a href="service-roof-installation.html">Roof Installation</a></li>
-                                        <li><a href="service-damage-roofing.html">Damage Roofing</a></li>
-                                        <li><a href="service-new-roofing.html">New Roofing</a></li>
-                                        <li><a href="service-roof-renovation.html">Roof Renovation</a></li>
-                                        <li><a href="service-roof-solar-panels.html">Roof Solar Panels</a></li>
+                                        <li><a href="service-roof-replacement.html">Roof Replacement</a></li>
+                                        <li><a href="service-roof-repair.html">Roof Repair</a></li>
+                                        <li><a href="service-storm-damage.html">Storm Damage & Insurance</a></li>
+                                        <li><a href="service-roof-inspections.html">Free Roof Inspections</a></li>
+                                        <li><a href="service-commercial-roofing.html">Commercial Roofing</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -2097,7 +2177,7 @@
                                         </span>
                                             <span class="text">
                                             <span>Call us for support</span>
-                                            <a href="tel:888123869523">+888 (123) 869523</a>
+                                            <a href="tel:2816128747">(281) 612-8747</a>
                                             </span>
                                         </li>
                                         <li>
@@ -2106,7 +2186,7 @@
                                         </span>
                                             <span class="text">
                                             <span>Email us for query</span>
-                                            <a href="mailto:example@gmail.com">example@gmail.com</a>
+                                            <a href="mailto:info@amstillroofing.com">info@amstillroofing.com</a>
                                             </span>
                                         </li>
                                         <li class="address">
@@ -2114,7 +2194,7 @@
                                             <img loading="lazy" src="assets/imgs/icon/map.svg" alt="">
                                         </span>
                                             <span class="text">
-                                            <a target="_blank" href="mailto:example@gmail.com">1058 Helton Ave, Stky <br> Berlin, Germany</a>
+                                            <a target="_blank" href="mailto:info@amstillroofing.com">14125 Memorial Dr <br> Houston, TX 77079</a>
                                         </span>
                                         </li>
                                     </ul>
@@ -2129,7 +2209,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="footer__copyright text-lg-start text-center">
-                                <p class="mb-0">© Copyright <a href="index.html">RoofPro</a> 2024 . All right reserved.</p>
+                                <p class="mb-0">© Copyright <a href="index.html">Amstill Roofing</a> 2026 . All rights reserved.</p>
                             </div>
                         </div>
 
