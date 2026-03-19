@@ -39,32 +39,35 @@
         /* Mega Menu */
         .main-menu ul li.has-mega > .submenu { display: none !important; }
         .main-menu ul li.has-mega { position: static !important; }
-        .main-menu ul li.has-mega > .mega-menu { position: absolute; left: 0; right: 0; top: 100%; width: 100%; background: #f5f5f5; border-top: 2px solid var(--rr-theme-primary); box-shadow: 0 20px 60px rgba(0,0,0,0.15); z-index: 9999; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16,1,0.3,1), visibility 0.35s; pointer-events: none; }
+        .main-menu ul li.has-mega > .mega-menu { position: absolute; left: 0; right: 0; top: 100%; width: 100%; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border-top: 3px solid var(--rr-theme-primary); box-shadow: 0 30px 80px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.06); z-index: 9999; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16,1,0.3,1), visibility 0.4s; pointer-events: none; }
         .main-menu ul li.has-mega:hover > .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
         .mega__menu-wrapper { position: relative; }
-        .mega-menu__inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; min-height: 340px; }
+        .mega-menu__inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; min-height: 360px; }
 
         /* Left panel — brand */
-        .mega-menu__brand { padding: 48px 44px; border-right: 1px solid rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: center; }
-        .mega-menu__brand-logo { height: 52px; width: auto; margin-bottom: 28px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3)); }
-        .mega-menu__brand-heading { font-size: 17px; font-weight: 700; color: #1a1a1a; line-height: 1.5; margin-bottom: 16px; letter-spacing: -0.01em; }
-        .mega-menu__brand-text { font-size: 13.5px; color: rgba(0,0,0,0.5); line-height: 1.7; margin: 0; }
-        .mega-menu__brand-badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; padding: 6px 14px; border-radius: 20px; background: rgba(188,24,39,0.1); border: 1px solid rgba(188,24,39,0.2); font-size: 11px; font-weight: 600; color: var(--rr-theme-primary); letter-spacing: 0.05em; text-transform: uppercase; }
+        .mega-menu__brand { padding: 48px 44px; background: linear-gradient(160deg, #1a1a1a 0%, #2d2d2d 100%); display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+        .mega-menu__brand::before { content: ''; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 70% 30%, rgba(188,24,39,0.15) 0%, transparent 50%); pointer-events: none; }
+        .mega-menu__brand-logo { height: 52px; width: auto; margin-bottom: 28px; filter: brightness(0) invert(1) drop-shadow(0 2px 12px rgba(0,0,0,0.4)); position: relative; z-index: 1; }
+        .mega-menu__brand-heading { font-size: 18px; font-weight: 700; color: #ffffff; line-height: 1.5; margin-bottom: 16px; letter-spacing: -0.01em; position: relative; z-index: 1; }
+        .mega-menu__brand-text { font-size: 13.5px; color: rgba(255,255,255,0.6); line-height: 1.7; margin: 0; position: relative; z-index: 1; }
+        .mega-menu__brand-badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 22px; padding: 8px 16px; border-radius: 24px; background: rgba(188,24,39,0.2); border: 1px solid rgba(188,24,39,0.4); font-size: 11px; font-weight: 700; color: #ff6b7a; letter-spacing: 0.06em; text-transform: uppercase; position: relative; z-index: 1; backdrop-filter: blur(4px); }
         .mega-menu__brand-badge svg { flex-shrink: 0; }
 
         /* Right panel — services grid */
-        .mega-menu__services { padding: 40px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-content: center; }
-        .mega-menu__link { display: flex; align-items: center; gap: 16px; padding: 16px 20px; border-radius: 14px; text-decoration: none; transition: all 0.25s ease; position: relative; }
-        .mega-menu__link:hover { background: rgba(188,24,39,0.06); }
-        .mega-menu__link-icon { width: 64px; height: 64px; border-radius: 12px; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease; }
-        .mega-menu__link:hover .mega-menu__link-icon { background: var(--rr-theme-primary); border-color: var(--rr-theme-primary); transform: scale(1.05); }
-        .mega-menu__link-icon img { width: 37px; height: 37px; object-fit: contain; transition: filter 0.3s ease; }
-        .mega-menu__link:hover .mega-menu__link-icon img { filter: brightness(0) invert(1); }
-        .mega-menu__link-text { display: flex; flex-direction: column; gap: 3px; }
-        .mega-menu__link-title { font-size: 14.5px; font-weight: 600; color: #1a1a1a; transition: color 0.2s; }
+        .mega-menu__services { padding: 32px 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-content: center; }
+        .mega-menu__link { display: flex; align-items: center; gap: 18px; padding: 18px 22px; border-radius: 16px; text-decoration: none; transition: all 0.3s cubic-bezier(0.16,1,0.3,1); position: relative; border: 1px solid transparent; }
+        .mega-menu__link:hover { background: #ffffff; border-color: rgba(188,24,39,0.12); box-shadow: 0 8px 32px rgba(188,24,39,0.08), 0 2px 8px rgba(0,0,0,0.04); transform: translateY(-2px); }
+        .mega-menu__link-icon { width: 60px; height: 60px; border-radius: 14px; background: linear-gradient(135deg, rgba(188,24,39,0.06) 0%, rgba(188,24,39,0.02) 100%); border: 1px solid rgba(188,24,39,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.35s cubic-bezier(0.16,1,0.3,1); }
+        .mega-menu__link:hover .mega-menu__link-icon { background: linear-gradient(135deg, var(--rr-theme-primary) 0%, #e63946 100%); border-color: var(--rr-theme-primary); transform: scale(1.08) rotate(-3deg); box-shadow: 0 6px 20px rgba(188,24,39,0.3); }
+        .mega-menu__link-icon img { width: 34px; height: 34px; object-fit: contain; transition: all 0.35s ease; }
+        .mega-menu__link:hover .mega-menu__link-icon img { filter: brightness(0) invert(1); transform: scale(1.1); }
+        .mega-menu__link-text { display: flex; flex-direction: column; gap: 4px; }
+        .mega-menu__link-title { font-size: 15px; font-weight: 700; color: #1a1a1a; transition: color 0.25s; letter-spacing: -0.01em; }
         .mega-menu__link:hover .mega-menu__link-title { color: var(--rr-theme-primary); }
-        .mega-menu__link-desc { font-size: 12px; color: rgba(0,0,0,0.45); line-height: 1.4; }
-        .mega-menu__link:hover .mega-menu__link-desc { color: rgba(0,0,0,0.65); }
+        .mega-menu__link-desc { font-size: 12.5px; color: rgba(0,0,0,0.4); line-height: 1.5; }
+        .mega-menu__link:hover .mega-menu__link-desc { color: rgba(0,0,0,0.6); }
+        .mega-menu__link::after { content: '\2192'; position: absolute; right: 18px; top: 50%; transform: translateY(-50%) translateX(-8px); font-size: 16px; color: var(--rr-theme-primary); opacity: 0; transition: all 0.3s ease; }
+        .mega-menu__link:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
 
         @media (max-width: 1199px) { .main-menu ul li.has-mega > .mega-menu { display: none !important; } }
         .main-menu ul li .submenu { background: linear-gradient(145deg, #141414, #0d0d0d); border: 1px solid rgba(188,24,39,0.12); border-radius: 16px; padding: 10px; min-width: 310px; box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03) inset; backdrop-filter: blur(12px); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(12px); }
@@ -470,7 +473,7 @@
                                                                     </span>
                                                                 </a>
                                                                 <a href="service-storm-damage.html" class="mega-menu__link">
-                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/icon-3.png" alt=""></span>
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/storm-damage.svg" alt=""></span>
                                                                     <span class="mega-menu__link-text">
                                                                         <span class="mega-menu__link-title">Storm Damage & Insurance</span>
                                                                         <span class="mega-menu__link-desc">Full claims handling from start to finish</span>
