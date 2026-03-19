@@ -2089,8 +2089,8 @@ only screen and (min-width: 576px) and (max-width: 767px),
     overflow: hidden;
     z-index: 5;
     padding: 12px 33.3px;
-    color: var(--rr-theme-primary);
-    background-color: var(--rr-common-white);
+    color: var(--rr-common-white);
+    background-color: var(--rr-theme-primary);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2133,14 +2133,14 @@ only screen and (min-width: 576px) and (max-width: 767px),
 .rr-btn__header .btn-wrap .text-one {
     position: relative;
     display: block;
-    color: var(--rr-theme-primary);
+    color: var(--rr-common-white);
 }
 
 .rr-btn__header .btn-wrap .text-two {
     position: absolute;
     top: 100%;
     display: block;
-    color: var(--rr-theme-primary);
+    color: var(--rr-common-white);
 }
 
 .rr-btn__header:hover .text-one,
@@ -6668,6 +6668,20 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 10px 0;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    bottom: 0;
+    z-index: 10;
+}
+.header-1 .header__main__wrapper {
+    width: 100%;
+}
+.header-1 .header__main-inner .header__action {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @media (max-width: 575px),
@@ -6688,6 +6702,9 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
         max-width: 100%;
         padding-left: 30px;
         padding-right: 10px;
+        position: relative;
+        top: auto;
+        bottom: auto;
     }
 }
 
@@ -6740,13 +6757,13 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
     position: relative;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    background-color: var(--rr-heading-primary);
+    background-color: #f5f5f5;
 }
 
 @media (max-width: 1199px) {
     .header-1 .header__main {
         overflow: hidden;
-        background-color: var(--rr-heading-primary);
+        background-color: #f5f5f5;
     }
 }
 
@@ -6763,7 +6780,9 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .header-1 .header__main-inner {
     padding: 0 30px;
-    background-color: var(--rr-heading-primary);
+    background-color: #f5f5f5;
+    justify-content: center !important;
+    position: relative;
 }
 
 @media (max-width:450px) {
@@ -8165,13 +8184,13 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 
 .main-menu ul li.active>a {
     font-weight: var(--rr-fw-sbold);
-    color: var(--rr-menu-white);
+    color: var(--rr-theme-primary);
 }
 
 .main-menu ul li>a {
     padding: 35.5px 0;
     display: inline-block;
-    color: var(--rr-menu-white);
+    color: #1a1a1a;
     font-weight: var(--rr-fw-medium);
     text-transform: capitalize;
     font-family: var(--rr-ff-exo);
@@ -8211,7 +8230,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     top: 110%;
     inset-inline-start: 0;
     min-width: 280px;
-    background: #0d0d0d;
+    background: var(--rr-heading-primary);
     z-index: 99;
     visibility: hidden;
     opacity: 0;
@@ -8302,7 +8321,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     top: 100%;
     left: 42.5%;
     padding: 30px 35px 30px;
-    background: #0d0d0d;
+    background: var(--rr-heading-primary);
     visibility: hidden;
     opacity: 0;
     border: 1px solid var(--rr-theme-primary);
@@ -8683,6 +8702,39 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     margin-top: 0;
     float: left;
     width: 100%;
+}
+
+.mean-container .mean-nav .mega-menu {
+    display: none !important;
+}
+
+.mean-container .mean-nav ul li .submenu {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+.mean-container .mean-nav ul li .submenu li a {
+    color: rgba(255,255,255,0.65) !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    border-radius: 0 !important;
+    gap: 0 !important;
+    background: transparent !important;
+    white-space: normal !important;
+}
+
+.mean-container .mean-nav ul li .submenu li a:hover {
+    color: var(--rr-theme-primary) !important;
+    background: transparent !important;
+}
+
+.mean-container .mean-nav ul li .submenu li a .dd-icon {
+    display: none !important;
 }
 
 .mean-container .mean-nav .wrapper {
@@ -12169,6 +12221,20 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 .experience__item {
     gap: 30px;
     position: relative;
+    flex-wrap: nowrap !important;
+}
+
+@media (max-width: 575px) {
+    .experience__box {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .experience__item {
+        width: auto;
+        justify-content: flex-start;
+        min-width: 260px;
+    }
 }
 
 .experience__item:after {
@@ -12213,6 +12279,7 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 
 .experience__item-icon img {
     max-width: 100%;
+    filter: hue-rotate(-15deg) saturate(1.8) brightness(0.75);
 }
 
 .experience__item-text-title {
@@ -14965,33 +15032,16 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .why-choose-us-2__right-shape {
     position: absolute;
-    right: -30px;
-    bottom: -40px;
-    opacity: 0.3;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.08;
+    pointer-events: none;
 }
 
 .why-choose-us-2__right-shape img {
-    opacity: 0.3;
-}
-
-.why-choose-us-2__right-shape.shape-2 {
-    bottom: -55px;
-}
-
-.why-choose-us-2__right-shape.shape-3 {
-    bottom: -57px;
-}
-
-.why-choose-us-2__right-shape.shape-4 {
-    bottom: -31px;
-}
-
-.why-choose-us-2__right-shape.shape-5 {
-    bottom: -2px;
-}
-
-.why-choose-us-2__right-shape.shape-6 {
-    bottom: -57px;
+    width: 120px;
+    height: 120px;
 }
 
 .why-choose-us-2__item {
@@ -17181,12 +17231,94 @@ select:focus-visible,
     border: 0;
 }
 
-/* Amstill branding: tint service card PNG icons to brand red */
-.what-we-do-2__item-img img {
-    filter: brightness(0) saturate(100%) invert(12%) sepia(89%) saturate(4539%) hue-rotate(348deg) brightness(88%) contrast(93%);
+/* Service photo grid cards (reference design) */
+.service-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
-.what-we-do-2__item:hover .what-we-do-2__item-img img {
+.service-photo-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+}
+.service-photo-card__img {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: visible;
+}
+.service-photo-card__img > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px 4px 0 0;
+    transition: transform 0.4s ease;
+}
+.service-photo-card:hover .service-photo-card__img > img {
+    transform: scale(1.03);
+}
+.service-photo-card__icon {
+    position: absolute;
+    bottom: -29px;
+    left: 14px;
+    width: 58px;
+    height: 58px;
+    background: var(--rr-theme-primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+.service-photo-card__icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
     filter: brightness(0) invert(1);
+}
+.service-photo-card__label {
+    display: flex;
+    align-items: center;
+    padding: 18px 16px 14px;
+    background: #fff;
+    border-radius: 0 0 4px 4px;
+}
+.service-photo-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.3;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    width: 100%;
+    text-align: center;
+}
+.service-photo-card:hover .service-photo-card__title {
+    color: var(--rr-theme-primary);
+}
+@media (max-width: 991px) {
+    .service-photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 575px) {
+    .service-photo-grid {
+        grid-template-columns: 1fr;
+    }
+    .service-photo-card__img,
+    .service-photo-card__img > img {
+        height: 200px;
+    }
+    .service-photo-card__title {
+        font-size: 16px;
+    }
 }
 
 /* Amstill branding: Why Choose Us section SVG icons to brand red */

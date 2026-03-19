@@ -331,6 +331,9 @@
         meanExpand: ['<i class="fa-regular fa-angle-right"></i>'],
     });
 
+    // Remove mega-menu from mobile nav so .mean-expand toggle can find .submenu via .prev('ul')
+    $('.mean-nav .mega-menu').remove();
+
     /*======================================
       Sidebar Toggle
       ========================================*/

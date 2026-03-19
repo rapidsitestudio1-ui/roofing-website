@@ -27,15 +27,46 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Unbounded:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --rr-ff-body: 'Space Grotesk', sans-serif; --rr-ff-heading: 'Space Grotesk', sans-serif; --rr-ff-robo: 'Space Grotesk', sans-serif; --rr-ff-exo: 'Space Grotesk', sans-serif; }
-        body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, textarea, button, select { font-family: 'Space Grotesk', sans-serif !important; }
-        .header__main-inner .mean__menu-wrapper { flex: 1; display: flex; justify-content: center; }
+        :root { --rr-ff-body: 'Jost', sans-serif; --rr-ff-heading: 'Jost', sans-serif; --rr-ff-robo: 'Jost', sans-serif; --rr-ff-exo: 'Jost', sans-serif; }
+        body, h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, textarea, button, select { font-family: 'Jost', sans-serif !important; }
+        .header__main-inner .mean__menu-wrapper { width: 100%; display: flex; justify-content: center; padding-left: calc(220px + 10%); }
         .main-menu ul li.has-dropdown > a .nav-icon { margin-right: 6px; font-size: 14px; color: var(--rr-theme-primary); transition: transform 0.3s; }
         .main-menu ul li.has-dropdown:hover > a .nav-icon { transform: rotate(10deg) scale(1.1); }
         .main-menu ul li.has-dropdown > a::after { content: "" !important; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); display: inline-block; margin-left: 8px; margin-bottom: 3px; transition: transform 0.3s ease; font-size: 0 !important; }
         .main-menu ul li.has-dropdown:hover > a::after { transform: rotate(225deg) !important; }
+        /* Mega Menu */
+        .main-menu ul li.has-mega > .submenu { display: none !important; }
+        .main-menu ul li.has-mega { position: static !important; }
+        .main-menu ul li.has-mega > .mega-menu { position: absolute; left: 0; right: 0; top: 100%; width: 100%; background: #f5f5f5; border-top: 2px solid var(--rr-theme-primary); box-shadow: 0 20px 60px rgba(0,0,0,0.15); z-index: 9999; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16,1,0.3,1), visibility 0.35s; pointer-events: none; }
+        .main-menu ul li.has-mega:hover > .mega-menu { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+        .mega__menu-wrapper { position: relative; }
+        .mega-menu__inner { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 340px 1fr; min-height: 340px; }
+
+        /* Left panel — brand */
+        .mega-menu__brand { padding: 48px 44px; border-right: 1px solid rgba(0,0,0,0.08); display: flex; flex-direction: column; justify-content: center; }
+        .mega-menu__brand-logo { height: 52px; width: auto; margin-bottom: 28px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3)); }
+        .mega-menu__brand-heading { font-size: 17px; font-weight: 700; color: #1a1a1a; line-height: 1.5; margin-bottom: 16px; letter-spacing: -0.01em; }
+        .mega-menu__brand-text { font-size: 13.5px; color: rgba(0,0,0,0.5); line-height: 1.7; margin: 0; }
+        .mega-menu__brand-badge { display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; padding: 6px 14px; border-radius: 20px; background: rgba(188,24,39,0.1); border: 1px solid rgba(188,24,39,0.2); font-size: 11px; font-weight: 600; color: var(--rr-theme-primary); letter-spacing: 0.05em; text-transform: uppercase; }
+        .mega-menu__brand-badge svg { flex-shrink: 0; }
+
+        /* Right panel — services grid */
+        .mega-menu__services { padding: 40px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-content: center; }
+        .mega-menu__link { display: flex; align-items: center; gap: 16px; padding: 16px 20px; border-radius: 14px; text-decoration: none; transition: all 0.25s ease; position: relative; }
+        .mega-menu__link:hover { background: rgba(188,24,39,0.06); }
+        .mega-menu__link-icon { width: 64px; height: 64px; border-radius: 12px; background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.08); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.3s ease; }
+        .mega-menu__link:hover .mega-menu__link-icon { background: var(--rr-theme-primary); border-color: var(--rr-theme-primary); transform: scale(1.05); }
+        .mega-menu__link-icon img { width: 37px; height: 37px; object-fit: contain; transition: filter 0.3s ease; }
+        .mega-menu__link:hover .mega-menu__link-icon img { filter: brightness(0) invert(1); }
+        .mega-menu__link-text { display: flex; flex-direction: column; gap: 3px; }
+        .mega-menu__link-title { font-size: 14.5px; font-weight: 600; color: #1a1a1a; transition: color 0.2s; }
+        .mega-menu__link:hover .mega-menu__link-title { color: var(--rr-theme-primary); }
+        .mega-menu__link-desc { font-size: 12px; color: rgba(0,0,0,0.45); line-height: 1.4; }
+        .mega-menu__link:hover .mega-menu__link-desc { color: rgba(0,0,0,0.65); }
+
+        @media (max-width: 1199px) { .main-menu ul li.has-mega > .mega-menu { display: none !important; } }
         .main-menu ul li .submenu { background: linear-gradient(145deg, #141414, #0d0d0d); border: 1px solid rgba(188,24,39,0.12); border-radius: 16px; padding: 10px; min-width: 310px; box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.03) inset; backdrop-filter: blur(12px); transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(12px); }
         .main-menu ul li:hover > .submenu { transform: translateY(0); }
         .main-menu ul li .submenu li { transform: none; padding: 0; margin-bottom: 2px; }
@@ -54,7 +85,7 @@
         .sd-content { max-width: 100%; }
         .sd-content__heading { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; color: #15181B; }
         .sd-content__tagline { font-style: italic; font-size: 15px; font-weight: 400; color: var(--rr-theme-primary); margin-bottom: 35px; padding-bottom: 30px; border-bottom: 1px solid #eee; }
-        .sd-content__text { font-size: 14.5px; line-height: 1.85; color: #555; margin-bottom: 28px; }
+        .sd-content__text { font-size: 16px; line-height: 1.85; color: #555; margin-bottom: 28px; }
         .sd-content__text:last-of-type { margin-bottom: 40px; }
 
         .sd-includes { background: #f8f8f8; border-radius: 16px; padding: 35px 40px; margin-bottom: 40px; }
@@ -78,6 +109,31 @@
             .sd-includes { padding: 24px 20px; }
             .sd-includes__inner { flex-direction: column; }
             .sd-includes__image { flex: none; width: 100%; max-height: 220px; }
+        }
+        /* FAQ Section */
+        .faq-section { background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%); }
+        .faq-section__header { text-align: center; margin-bottom: 50px; }
+        .faq-section__subtitle { display: inline-block; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--rr-theme-primary); background: rgba(188,24,39,0.08); padding: 8px 20px; border-radius: 30px; margin-bottom: 16px; }
+        .faq-section__title { font-size: 36px; font-weight: 800; color: #15181B; line-height: 1.2; }
+        .faq-section__title span { color: var(--rr-theme-primary); }
+        .faq__item { border: 1px solid #e5e5e5; border-radius: 12px; margin-bottom: 16px; overflow: hidden; transition: all 0.3s ease; background: #fff; }
+        .faq__item:hover { border-color: #ccc; }
+        .faq__item.active { border-color: var(--rr-theme-primary); box-shadow: 0 8px 30px rgba(188,24,39,0.1); }
+        .faq__header { padding: 22px 28px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: #fff; transition: all 0.3s ease; }
+        .faq__item.active .faq__header { background: var(--rr-theme-primary); }
+        .faq__header h5 { margin: 0; font-size: 17px; font-weight: 600; color: #15181B; transition: all 0.3s ease; line-height: 1.4; }
+        .faq__item.active .faq__header h5 { color: #fff; }
+        .faq__icon { width: 32px; height: 32px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 600; color: var(--rr-theme-primary); transition: all 0.3s ease; border-radius: 50%; background: rgba(188,24,39,0.08); }
+        .faq__item.active .faq__icon { color: #fff; background: rgba(255,255,255,0.2); transform: rotate(45deg); }
+        .faq__body { padding: 0 28px; max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+        .faq__item.active .faq__body { padding: 20px 28px; max-height: 300px; }
+        .faq__body p { margin: 0; color: #555; line-height: 1.8; font-size: 15px; }
+        @media (max-width: 767px) {
+            .faq-section__title { font-size: 26px; }
+            .faq__header { padding: 18px 20px; }
+            .faq__header h5 { font-size: 15px; }
+            .faq__body { padding: 0 20px; }
+            .faq__item.active .faq__body { padding: 16px 20px; }
         }
     </style>
 </head>
@@ -248,7 +304,7 @@
                             <a href="index.html">
                                 <div class="logo d-flex align-items-center justify-content-center">
                                     
-                                    <img src="assets/imgs/logo/logo-white.svg" alt="Amstill Roofing" style="height: 65px; width: 125px; object-fit: contain;">
+                                    <img src="assets/imgs/logo/logo.svg" alt="Amstill Roofing" style="height: 65px; width: 125px; object-fit: contain;">
                                 </div>
                             </a>
                         </div>
@@ -292,15 +348,72 @@
                                             <ul>
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="about-us.html">About Us</a></li>
-                                                <li class="has-dropdown active"><a href="service.html">Services</a>
+                                                <li class="has-dropdown has-mega active"><a href="service.html">Services</a>
                                                     <ul class="submenu">
-                                                        <li><a href="service-roof-replacement.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-1.png" alt="Roof Replacement"></span>Roof Replacement</a></li>
-                                                        <li><a href="service-roof-repair.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-2.png" alt="Roof Repair"></span>Roof Repair</a></li>
-                                                        <li><a href="service-storm-damage.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-3.png" alt="Storm Damage"></span>Storm Damage &amp; Insurance</a></li>
-                                                        <li><a href="service-roof-inspections.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-4.png" alt="Roof Inspections"></span>Free Roof Inspections</a></li>
-                                                        <li><a href="service-commercial-roofing.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-5.png" alt="Commercial Roofing"></span>Commercial Roofing</a></li>
-                                                        <li><a href="service-roof-installation.html"><span class="dd-icon"><img loading="lazy" src="assets/imgs/why-choose-us-2/icon-6.png" alt="New Installation"></span>New Roof Installation</a></li>
+                                                        <li><a href="service-roof-replacement.html">Roof Replacement</a></li>
+                                                        <li><a href="service-roof-repair.html">Roof Repair</a></li>
+                                                        <li><a href="service-storm-damage.html">Storm Damage & Insurance</a></li>
+                                                        <li><a href="service-roof-inspections.html">Free Roof Inspections</a></li>
+                                                        <li><a href="service-commercial-roofing.html">Commercial Roofing</a></li>
+                                                        <li><a href="service-roof-installation.html">New Roof Installation</a></li>
                                                     </ul>
+                                                    <div class="mega-menu">
+                                                        <div class="mega-menu__inner">
+                                                            <div class="mega-menu__brand">
+                                                                <img src="assets/imgs/logo/logo.svg" alt="Amstill Roofing" class="mega-menu__brand-logo">
+                                                                <h3 class="mega-menu__brand-heading">Houston's Trusted Roofer<br>Since 1974</h3>
+                                                                <p class="mega-menu__brand-text">Family-owned for over 50 years. Owens Corning Platinum Preferred Contractor and GAF Master Elite Roofer serving Houston and Round Rock, TX.</p>
+                                                                <span class="mega-menu__brand-badge">
+                                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" fill="currentColor"/></svg>
+                                                                    4.9 Stars — 1,400+ Reviews
+                                                                </span>
+                                                            </div>
+                                                            <div class="mega-menu__services">
+                                                                <a href="service-roof-replacement.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/roof-replacement.svg" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Roof Replacement</span>
+                                                                        <span class="mega-menu__link-desc">Complete tear-off and premium rebuild</span>
+                                                                    </span>
+                                                                </a>
+                                                                <a href="service-roof-repair.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/roof-repair.svg" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Roof Repair</span>
+                                                                        <span class="mega-menu__link-desc">Fast emergency and scheduled repairs</span>
+                                                                    </span>
+                                                                </a>
+                                                                <a href="service-storm-damage.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/icon-3.png" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Storm Damage & Insurance</span>
+                                                                        <span class="mega-menu__link-desc">Full claims handling from start to finish</span>
+                                                                    </span>
+                                                                </a>
+                                                                <a href="service-roof-inspections.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/roof-inspections.svg" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Free Roof Inspections</span>
+                                                                        <span class="mega-menu__link-desc">No-obligation expert assessment</span>
+                                                                    </span>
+                                                                </a>
+                                                                <a href="service-commercial-roofing.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/commercial-roofing.svg" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">Commercial Roofing</span>
+                                                                        <span class="mega-menu__link-desc">Flat roofs, coatings, and commercial systems</span>
+                                                                    </span>
+                                                                </a>
+                                                                <a href="service-roof-installation.html" class="mega-menu__link">
+                                                                    <span class="mega-menu__link-icon"><img src="assets/imgs/why-choose-us-2/roof-installation.svg" alt=""></span>
+                                                                    <span class="mega-menu__link-text">
+                                                                        <span class="mega-menu__link-title">New Roof Installation</span>
+                                                                        <span class="mega-menu__link-desc">Asphalt, metal, tile, slate, and flat</span>
+                                                                    </span>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                                 <li><a href="blog.html">Blog</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
@@ -313,8 +426,8 @@
                                     <div class="header__action d-flex align-items-center">
                                         <button type="button" aria-label="Open search" class="search-open-btn d-none d-sm-block">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M19.0004 18.9999L14.6504 14.6499" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M19.0004 18.9999L14.6504 14.6499" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                         </svg>
                                     </button>
 
@@ -386,21 +499,17 @@
         <section class="service-details section-space__top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-4">
+                    <div class="col-xl-4 order-2 order-xl-1">
                         <div class="sidebar sidebar-rr-sticky">
                             <div class="sidebar__widget">
                                 <h4 class="sidebar__widget-title">Our Services</h4>
                                 <div class="sidebar__widget-category">
                                     <a href="service-roof-replacement.html">Roof Replacement <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
                                     <a href="service-roof-repair.html">Roof Repair <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-roof-installation.html">New Roof Installation <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
                                     <a href="service-storm-damage.html">Storm Damage &amp; Insurance <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
                                     <a href="service-roof-inspections.html">Free Roof Inspections <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
                                     <a href="service-commercial-roofing.html">Commercial Roofing <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-roof-replacement.html">Roof Replacement <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-storm-damage.html">Storm Damage <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-roof-inspections.html">Free Inspections <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
-                                    <a href="service-commercial-roofing.html">Commercial Roofing <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
+                                    <a href="service-roof-installation.html">New Roof Installation <img loading="lazy" src="assets/imgs/blog-details/arrow.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="sidebar__widget estimate section-bg-1">
@@ -423,7 +532,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-8">
+                    <div class="col-xl-8 order-1 order-xl-2">
                         <div class="sd-content">
                             <!-- Hero Image -->
                             <div class="sd-content__media mb-35">
@@ -495,6 +604,76 @@
             </div>
         </section>
         <!-- service-details  area end -->
+
+        <!-- faq area start -->
+        <section class="faq-section section-space">
+            <div class="container">
+                <div class="faq-section__header">
+                    <span class="faq-section__subtitle wow fadeInUp" data-wow-delay=".1s">FAQ</span>
+                    <h2 class="faq-section__title wow fadeInUp" data-wow-delay=".2s">Roof Replacement <span>Questions</span></h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-10">
+                        <div class="faq__item active wow fadeInUp" data-wow-delay=".2s">
+                            <div class="faq__header" onclick="toggleFaq(this)">
+                                <h5>How do I know if I need a full roof replacement?</h5>
+                                <div class="faq__icon">+</div>
+                            </div>
+                            <div class="faq__body">
+                                <p>Signs include shingles that are curling, cracking, or missing, roof age over 20 years, persistent leaks in multiple areas, sagging roof deck, or visible daylight through roof boards. Our free inspection will give you a definitive answer.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item wow fadeInUp" data-wow-delay=".3s">
+                            <div class="faq__header" onclick="toggleFaq(this)">
+                                <h5>How long does a roof replacement take?</h5>
+                                <div class="faq__icon">+</div>
+                            </div>
+                            <div class="faq__body">
+                                <p>Most residential roof replacements are completed in 1–3 days depending on the size of your home, weather conditions, and the roofing materials chosen. We work efficiently to minimize disruption to your daily routine.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item wow fadeInUp" data-wow-delay=".4s">
+                            <div class="faq__header" onclick="toggleFaq(this)">
+                                <h5>What roofing materials do you offer?</h5>
+                                <div class="faq__icon">+</div>
+                            </div>
+                            <div class="faq__body">
+                                <p>As an Owens Corning Platinum Preferred Contractor, we offer premium architectural shingles, designer shingles, and specialty products. We also install metal roofing, tile, and flat roof systems tailored to Houston's climate.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item wow fadeInUp" data-wow-delay=".5s">
+                            <div class="faq__header" onclick="toggleFaq(this)">
+                                <h5>What warranties come with a new roof?</h5>
+                                <div class="faq__icon">+</div>
+                            </div>
+                            <div class="faq__body">
+                                <p>Our roof replacements include manufacturer warranties up to 50 years on materials plus our workmanship warranty. As a Platinum Preferred Contractor, we can offer Owens Corning's top-tier Platinum Protection limited warranty.</p>
+                            </div>
+                        </div>
+                        <div class="faq__item wow fadeInUp" data-wow-delay=".6s">
+                            <div class="faq__header" onclick="toggleFaq(this)">
+                                <h5>Do you help with insurance claims for roof replacement?</h5>
+                                <div class="faq__icon">+</div>
+                            </div>
+                            <div class="faq__body">
+                                <p>Absolutely. We have decades of experience working with insurance companies and will guide you through the entire claims process — from the initial inspection and documentation to meeting with your adjuster and ensuring you receive fair compensation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+        function toggleFaq(el) {
+            var item = el.parentElement;
+            var allItems = document.querySelectorAll('.faq__item');
+            allItems.forEach(function(faq) {
+                if (faq !== item) faq.classList.remove('active');
+            });
+            item.classList.toggle('active');
+        }
+        </script>
+        <!-- faq area end -->
 
         <!-- our-clients area start -->
         <div class="our-clients section-space-80">
