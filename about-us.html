@@ -694,7 +694,6 @@
         <style>
             .journey-section {
                 border-top: 2px solid #1a1d21;
-                border-bottom: 2px solid #1a1d21;
             }
             .journey-intro { position: sticky; top: 120px; }
             .journey-subtitle {
@@ -773,24 +772,11 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 10px;
-                background: var(--rr-theme-primary);
-                color: #fff;
-                font-size: 13px;
-                font-weight: 700;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                padding: 18px 32px;
-                border: none;
-                transition: background 0.3s ease, transform 0.2s ease;
                 text-decoration: none;
             }
             .journey-cta:hover {
-                background: #d4400a;
                 color: #fff;
-                transform: translateY(-2px);
             }
-            .journey-cta svg { transition: transform 0.3s ease; }
-            .journey-cta:hover svg { transform: translateX(4px); }
             .journey-timeline {
                 position: relative;
                 padding-left: 40px;
@@ -875,11 +861,12 @@
                                 <img loading="lazy" class="journey-images__shape" src="assets/imgs/our-skill/bg-shape.png" alt="">
                                 <img loading="lazy" class="journey-images__main" src="assets/imgs/our-skill/our-skill-1.jpg" alt="Skilled worker operating equipment">
                                 <img loading="lazy" class="journey-images__secondary" src="assets/imgs/our-skill/our-skill-2.jpg" alt="Team reviewing blueprints on site">
-                                <img loading="lazy" class="journey-images__stripes" src="assets/imgs/our-skill/shape-1.png" alt="">
                             </div>
-                            <a href="contact.html" class="journey-cta">
-                                Get a Free Estimate
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                            <a href="contact.html" class="rr-btn">
+                                <div class="btn-wrap">
+                                    <span class="text-one">Get a Free Estimate</span>
+                                    <span class="text-two">Get a Free Estimate</span>
+                                </div>
                             </a>
                         </div>
                     </div>
