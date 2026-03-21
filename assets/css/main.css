@@ -12656,6 +12656,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 .team__item-media {
     position: relative;
     overflow: hidden;
+    aspect-ratio: 410 / 399.5;
 }
 
 .team__item-media img {
@@ -13445,7 +13446,17 @@ only screen and (min-width: 576px) and (max-width: 767px),
 .about-us__media {
     overflow: hidden;
     border-radius: 70px 0px;
-    border: 6px solid var(--rr-common-white);
+    border: 3px solid var(--rr-common-white);
+}
+
+.about-us__media img {
+    transform: scale(0.9);
+    transform-origin: center;
+}
+
+.about-us__media-circle__wraper {
+    transform: scale(0.9);
+    transform-origin: top right;
 }
 
 .about-us__media.img2 {
@@ -14516,8 +14527,8 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 }
 
 .working-process__item-icon-img {
-    width: 150px;
-    height: 150px;
+    width: 135px;
+    height: 115px;
     border-radius: 94px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -14558,6 +14569,10 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
 
 .working-process {
     background: url('../imgs/testimonial-2/bg.png') center center / cover no-repeat;
+}
+
+.working-process > .container {
+    max-width: 90%;
 }
 
 .working-process-2 {
