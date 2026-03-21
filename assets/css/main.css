@@ -17387,3 +17387,82 @@ select:focus-visible,
 .why-choose-us-2__icon svg rect {
     fill: var(--rr-theme-primary);
 }
+
+/* ========================================
+   Mobile Responsiveness Fixes
+   ======================================== */
+
+/* Mega menu mobile fix */
+@media (max-width: 991px) {
+    .mega-menu__inner {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+    }
+    .mega-menu__services {
+        grid-template-columns: 1fr !important;
+        padding: 20px 16px !important;
+    }
+    .mega-menu__brand {
+        display: none !important;
+    }
+}
+
+/* Submenu mobile fix */
+@media (max-width: 575px) {
+    .main-menu ul li .submenu {
+        min-width: auto;
+        width: 100%;
+        max-width: calc(100vw - 20px);
+    }
+}
+
+/* Working process circles - mobile fix */
+@media (max-width: 767px) {
+    .working-process__item [style*="width: 132px"] {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .working-process__item [style*="width: 132px"] img {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .working-process__item [style*="width: 30px"][style*="top: 5px"] {
+        width: 22px !important;
+        height: 22px !important;
+        font-size: 11px !important;
+    }
+}
+
+/* Marquee text mobile fix */
+@media (max-width: 767px) {
+    .marquee-item span {
+        font-size: 18px !important;
+    }
+}
+
+/* Section padding mobile fix */
+@media (max-width: 767px) {
+    .section-space {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+    .section-space-100 {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+}
+
+/* Breadcrumb padding mobile fix */
+@media (max-width: 767px) {
+    .breadcrumb__area [style*="padding: 180px"] {
+        padding: 100px 0 60px !important;
+    }
+}
+
+/* FAQ mobile fix */
+@media (max-width: 575px) {
+    .faq__item.active .faq__body {
+        max-height: none;
+        padding: 16px 20px;
+    }
+}

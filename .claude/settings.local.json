@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i \"s|family=Space+Grotesk:wght@300;400;500;600;700\\\\&family=Unbounded:wght@400;500;600;700;800;900|family=Jost:wght@300;400;500;600;700;800;900|g\" \"$f\")",
+      "Bash(sed -i \"s|''Space Grotesk'', sans-serif|''Jost'', sans-serif|g\" \"$f\")",
+      "Bash(done)",
+      "Bash(cp \"C:/Users/dirir/Downloads/warranty \\(2\\).svg\" \"C:/Users/dirir/Downloads/roofing-website/html.rrdevs.net/roofing-website-temp/assets/imgs/why-choose-us-2/warranty-2.svg\")",
+      "Bash(cp \"C:/Users/dirir/Downloads/emergency.svg\" \"C:/Users/dirir/Downloads/roofing-website/html.rrdevs.net/roofing-website-temp/assets/imgs/why-choose-us-2/emergency.svg\")",
+      "Bash(cp \"C:/Users/dirir/Downloads/translator.svg\" \"C:/Users/dirir/Downloads/roofing-website/html.rrdevs.net/roofing-website-temp/assets/imgs/why-choose-us-2/translator.svg\")",
+      "Bash(cp \"C:/Users/dirir/Downloads/warranty \\(1\\).svg\" \"C:/Users/dirir/Downloads/roofing-website/html.rrdevs.net/roofing-website-temp/assets/imgs/why-choose-us-2/warranty-1.svg\")",
+      "Bash(cp \"C:/Users/dirir/Downloads/certificate.svg\" \"C:/Users/dirir/Downloads/roofing-website/html.rrdevs.net/roofing-website-temp/assets/imgs/why-choose-us-2/certificate.svg\")"
+    ]
+  }
+}

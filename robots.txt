@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/js/
+Disallow: /assets/css/vendor/
+
+Sitemap: https://amstill-redesign.vercel.app/sitemap.xml
