@@ -12258,9 +12258,18 @@ only screen and (min-width: 992px) and (max-width: 1199px) {
         gap: 30px;
     }
     .experience__item {
-        width: auto;
-        justify-content: flex-start;
-        min-width: 260px;
+        width: 100%;
+        justify-content: center;
+        min-width: 0;
+        gap: 20px;
+    }
+    .experience__item-icon {
+        width: 65px;
+        height: 65px;
+        flex-shrink: 0;
+    }
+    .experience__item-text h4 {
+        font-size: 14px;
     }
 }
 
